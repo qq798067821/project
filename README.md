@@ -18,6 +18,8 @@
  
  飘城 https://qq798067821.github.io/project/整站项目/飘城/index.html  （bootstrap为主）<br>
 
+<h2>vue表单</h2>
+https://qq798067821.github.io/vue/表单/index.html   （vue+bootstrap）<br>
 
 <h2>App</h2>
 请下载安装。
