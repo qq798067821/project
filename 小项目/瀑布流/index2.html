@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	</head>
+	<style type="text/css">
+		* {
+			padding: 0;
+			margin: 0;
+		}
+		
+		#box {
+			margin: 10px auto;
+			position: relative;
+		}
+		
+		#box div {
+			transition: all 2s;
+		}
+		
+		#box .img {
+			overflow: hidden;
+			padding: 10px;
+			overflow: hidden;
+			position: absolute;
+		}
+		
+		img {
+			width: 200px;
+			height: auto;
+		}
+	</style>
+
+	<body>
+		<div id="box">
+		</div>
+		<script type="text/javascript">
+			"use strict";
+			let arrImg = ['img/0.jpg', 'img/1.jpg', 'img/2.jpg', 'img/3.jpg', 'img/4.jpg'];
+			var On = 0;
+			add();
+
+			function add() {
+				for(let i = 0; i < arrImg.length; i++) {
+					var Img = document.createElement('img');
+					Img.src = arrImg[i];
+					var div = document.createElement('div');
+					box.appendChild(div);
+					div.className = 'img';
+					div.appendChild(Img);
+					div.style.left = 0;
+					div.style.top = 0;
+				}
+			}
+
+			window.onload = function() {
+				var box = document.getElementById("box");
+				var div = box.getElementsByTagName('div');
+				var s = 0;
+				var mun = 0;
+				var w = div[0].offsetWidth;
+				var arrL = [];
+				var arrT = [];
+
+				//初始化列
+				stat();
+
+				function stat() {
+					mun = document.body.clientWidth / w;
+					mun = Math.floor(mun) < 2 ? 2 : Math.floor(mun);
+					box.style.width = mun * w + "px";
+					for(var i = 0; i < mun; i++) {
+						arrL.push(i * w);
+						arrT.push(0);
+					}
+				}
+				//定位置
+				pos();
+
+				function pos() {
+					for(var i = 0; i < div.length; i++)
+						if(i < mun) {
+							div[i].style.left = arrL[i] + "px";
+							arrT[i] = div[i].offsetHeight;
+						} else {
+							var index = min(arrT);
+							div[i].style.top = arrT[index] + 'px';
+							div[i].style.left = arrL[index] + "px";
+							arrT[index] += div[i].offsetHeight;
+						}
+					s = div.length;
+				}
+
+				function addPos() {
+					for(let i = s; i < div.length; i++) {
+						var index = min(arrT);
+						div[i].style.top = arrT[index] + 'px';
+						div[i].style.left = arrL[index] + "px";
+						arrT[index] += div[i].offsetHeight;
+					}
+					s = div.length;
+				}
+
+				//点击事件
+				document.onclick = function() {
+					add();
+					addPos();
+				}
+
+				//求最小值
+				function min(arr) {
+					var min = arr[0];
+					var index = 0;
+					for(var i = 1; i < arr.length; i++) {
+						if(min > arr[i]) {
+							min = arr[i];
+							index = i;
+						}
+					}
+					return index;
+				}
+			}
+		</script>
+	</body>
+
+</html>
