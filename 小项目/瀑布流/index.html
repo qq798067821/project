@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			#bo {
+				height: auto;
+				border: 1px solid red;
+				margin: 20px auto;
+				display: block;
+				position: relative;
+			}
+			
+			img {
+				position: absolute;
+			}
+		</style>
+	</head>
+	<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+
+	<body>
+		<div id="bo">
+		</div>
+		<script>
+			$(function() {
+				var $bo = $("#bo"),
+					iurl = "http://www.wookmark.com/api/json/popular?callback=?",
+					iWidth = 200,
+					iSpace = 10,
+					iOuterWidth = iWidth + iSpace,
+					iPage = 0;
+				$li = null,
+					icell = 0,
+					arrL = [],
+					arrT = [],
+					iBtn = true;
+				//console.log($("body").width())
+				setCell(); //初始化
+				function setCell() //计算列数
+				{
+					$bo.width(Math.floor($("body").width() / iOuterWidth) * iOuterWidth);
+					icell = Math.floor($("body").width() / iOuterWidth);
+					if(icell > 6) {
+						icell = 6;
+					} else if(icell < 3) {
+						icell = 3;
+					}
+				}
+				opt();
+
+				function opt() {
+					for(var i = 0; i < icell; i++) {
+						arrT.push(0);
+						arrL.push(i * iOuterWidth);
+					}
+				}
+
+				//改变窗口大小时候触发
+				$(window).on("resize", function() {
+					var iLen = icell;
+					setCell();
+					if(iLen == icell) {
+						return;
+					}
+					arrT = [];
+					arrL = [];
+					opt();
+					$bo.find("img").each(function() {
+						var MinIndex = getMin();
+						$(this).animate({
+							left: arrL[MinIndex],
+							top: arrT[MinIndex]
+						}, 1000)
+						arrT[MinIndex] += $(this).height() + 10;
+					});
+
+				})
+
+				//滚动条事件
+				$(window).on("scroll", function() {
+					var ih = $(window).scrollTop() + $(window).innerHeight();
+					var Minindex = getMin();
+					if(arrT[Minindex] + $bo.offset().top < ih) {
+						jsonDate();
+					}
+				})
+
+				jsonDate();
+
+				function jsonDate() {
+					if(!iBtn) {
+						return;
+					}
+					iBtn = false;
+					$.getJSON(iurl, {
+						page: +iPage
+					}, function(date) {
+						console.log(iPage)
+						$.each(date, function(index, obj) {
+							var oImg = $("<img />");
+							var iHeight = iWidth / obj.width * obj.height;
+							oImg.css({
+								width: iWidth,
+								height: iHeight
+							});
+							//获取arrT最小值
+							var MinIndex = getMin();
+							oImg.css({
+								left: arrL[MinIndex],
+								top: arrT[MinIndex]
+							})
+							arrT[MinIndex] += iHeight + 10;
+							$bo.append(oImg);
+							var objImg = new Image();
+							objImg.onload = function() {
+								console.log(this.src)
+								oImg.attr('src', this.src);
+							}
+							objImg.src = obj.preview;
+							iBtn = true;
+						})
+					})
+
+				}
+				//求最小值
+				function getMin() {
+					var a = arrT[0];
+					var _index = 0;
+					for(var i = 1; i < arrT.length; i++) {
+						if(arrT[i] < a) {
+							a = arrT[i];
+							_index = i;
+						}
+					}
+					return _index;
+				}
+
+			})
+		</script>
+	</body>
+
+</html>
