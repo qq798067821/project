@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <title></title>
+    <script src="js/mui.min.js"></script>
+    <link href="css/mui.min.css" rel="stylesheet"/>
+	<style type="text/css">
+		#nav{z-index: 22;background: #F2F2F2;opacity: 1; }
+		#newsContent{padding: 0;margin: 0;margin-top: 46px;padding-bottom:100px ;}
+		#newsContent .mui-card-content img{width: 100%;}
+		#newsContent .mui-card-content{line-height: 40px;}
+		#openSheet{position: fixed;margin:0;border-radius:0 ;bottom: 0;}
+	</style>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav" id="nav">
+	    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+	    <h1 class="mui-title" id="title"></h1>
+	</header>
+	<div class="mui-card" id="newsContent">
+		<div class="mui-card-content"></div>
+	</div>	
+	
+	
+	
+	<div id="sheet" class="mui-popover mui-popover-bottom mui-popover-action"  id="show">
+	    <!-- 可选择菜单 -->
+	    <ul class="mui-table-view" id="share">
+	      <li class="mui-table-view-cell">
+	        <a href="#">分享的微信朋友</a>
+	      </li>
+	      <li class="mui-table-view-cell"> 
+	        <a href="#">分享到微信朋友圈</a>
+	      </li>
+	    </ul>
+	    <!-- 取消菜单 -->
+	    <ul class="mui-table-view cancel">
+	      <li class="mui-table-view-cell " >
+	        <a href="#sheet1"><b>取消</b></a>
+	      </li>
+	    </ul>
+	</div>
+	<a href="#sheet" id="openSheet"  class="mui-btn mui-btn-primary mui-btn-block">分享</a> 
+<script src="js/h.js" type="text/javascript" charset="utf-8"></script>	
+<script type="text/javascript" charset="utf-8">
+  	mui.init({
+  		
+  	});
+  	mui.plusReady(function(){
+  		var _self = plus.webview.currentWebview();//本窗口
+  		//console.log(_self.newId)获得传过来的值
+  	 	
+	mui.getJSON(
+		'http://hoa.hcoder.net/index.php?user=hcoder&pwd=hcoder&m=info&id='+_self.newId,
+		function(res){
+			news = res;
+			h('#title').html(res.title);
+			h('.mui-card-content').html(res.content);
+		}
+	);
+  })
+  	
+
+  	
+  	
+h(".cancel").tap(function(){
+	mui('.mui-popover').popover('hide',document.getElementById("openPopover"));
+})
+mui('.mui-popover').popover('hide',document.getElementById("openPopover"));
+
+
+
+
+//分享到
+
+h('#share').find('li').each(function(obj){
+	h(obj).tap(function(){
+		shareNow(obj.index+1)
+	})
+})
+
+
+var shareWx = null;
+function shareNow(type){
+	plus.share.getServices(function(services){
+		for(var k in services){
+			if(services[k].id = 'weixin'){
+				shareWx = services[k];
+			}
+		}
+		if(shareWx == null){mui.toast('您没有安装微信'); return;}
+		var msg = {
+			content : "恭喜阿宇开发第一个APP",
+			href    : "https://user.qzone.qq.com/798067821/infocenter?ptsig=xJnK752pVzQif7djsLcyU99U6MJ-JICky0DxNRTHMd0_"
+		};
+		if(type == 1){
+			msg.extra = {scene:"WXSceneSession"} 
+		}else{
+			msg.extra = {scene:"WXSceneTimeline"}
+		}
+		shareWx.send(msg, function(){
+			mui.toast('分享成功'); 
+		}, function(){
+			mui.toast('您取消了分享');
+		});
+	}, function(){
+		mui.toast('获取分享服务失败');
+	});
+}
+</script>	
+</body>
+</html>

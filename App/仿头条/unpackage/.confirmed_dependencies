@@ -1,0 +1,52 @@
+{
+  "index.html": {
+    "resources": [
+      "js/mui.min.js",
+      "fonts/mui.ttf",
+      "css/mui.css",
+      "js/h.js",
+      "sub1.html"
+    ],
+    "refer": [
+      "sub4.html",
+      "sub3.html",
+      "sub2.html",
+      "sub1.html"
+    ]
+  },
+  "sub1.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "info.html"
+    ]
+  },
+  "sub4.html": {
+    "resources": [
+      "css/mui.min.css"
+    ]
+  },
+  "sub3.html": {
+    "resources": [
+      "css/mui.min.css",
+      "imgs/appLogo.png",
+      "imgs/share.png",
+      "imgs/Nolog.jpg"
+    ]
+  },
+  "info.html": {
+    "resources": [
+      "css/mui.min.css",
+      "imgs/share.png"
+    ]
+  },
+  "sub2.html": {
+    "resources": [
+      "css/mui.min.css"
+    ],
+    "refer": [
+      "info.html"
+    ]
+  }
+}

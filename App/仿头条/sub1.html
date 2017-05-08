@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+<title></title>
+<script src="js/mui.min.js"></script>
+<link href="css/mui.min.css" rel="stylesheet"/>
+<style type="text/css">
+	#banner{height: 200px;}
+</style>
+</head>
+<body style="font-size:36px; line-height:50px;">
+	<div class="mui-content">
+<div id="demo1" >
+<span></span>
+</div><!--进度条-->
+		<div class="mui-slider">
+			<div class="mui-slider-group mui-slider-loop" id="banner"></div>
+			<div class="mui-slider-indicator" id="point"></div>
+		</div>
+<ul class="mui-table-view" id="newsListUl">
+</ul>
+	</div>		
+
+
+
+
+
+
+
+<script type="text/javascript" src="js/h.js" ></script>
+<script type="text/javascript">
+mui("#demo1").progressbar().show();
+var _self, _next, timer;
+mui.plusReady(function(){
+	mui.get("http://hoa.hcoder.net/index.php?user=hcoder&pwd=hcoder&m=lunbo",function(data){
+		var arr  = data.split('--hcSplitor--');
+		var points = '';
+		var html='<div class="mui-slider-item"><a href="#">'+arr[arr.length - 1]+'</a></div>';
+		for (var i=0;i<arr.length;i++) {
+			html+=' <div class="mui-slider-item"><a href="#">'+arr[i]+'</a></div>'
+			points += '<div class="mui-indicator"></div>';
+		}
+		html+='<div class="mui-slider-item"><a href="#">'+arr[0]+'</a></div>';
+		h("#banner").html(html);
+		h('#point').html(points);
+		var gallery = mui('.mui-slider');
+		gallery.slider({
+		  interval:5000//自动轮播周期，若为0则不自动播放，默认为0；
+		});			
+	})
+	
+	//新闻
+	mui.get("http://hoa.hcoder.net/index.php?user=hcoder&pwd=hcoder&m=mediaList&page=1",function(res){
+			var newsLists = res.split('--hcSplitor--');
+			var html = '';
+			
+			for(var i = 0; i < newsLists.length; i++){
+				var newsItem = newsLists[i].split('--hcListSplitor--');
+				html += ` <li class="mui-table-view-cell mui-media">
+			        <a href="javascript:show(`+newsItem[0]+`);">
+			            <img class="mui-media-object mui-pull-left" src=`+newsItem[1]+`>
+			            <div class="mui-media-body">
+			                <p class="mui-ellipsis">`+newsItem[2]+`</p>
+			            </div>
+			        </a>
+      					 </li>`;
+			}
+			h('#newsListUl').html(html);
+			mui("#demo1").progressbar().hide();
+		}
+	)
+	
+
+
+	
+	
+    _self = plus.webview.currentWebview();
+    _next = plus.webview.getWebviewById('sub2.html');
+    index = plus.webview.getLaunchWebview();
+    _self.drag(
+        {
+            direction : "left",
+            moveMode  :　"followFinger"
+        },
+        {
+            view　              :　_next,
+            moveMode  : "follow"
+        },
+        function(e){
+			if(e.type == 'end' && e.result){
+				index.evalJS('h("#navFooter").find("a").removeClass("mui-active"); h("#nav2").addClass("mui-active");');
+			}
+        }
+    );    
+});
+
+
+function show(id)
+{
+	mui.openWindow({
+		url : 'info.html',
+		id  : 'info.html',
+		extras : {
+			newId : id
+		}
+	});	
+}
+</script>
+</body>
+</html>
