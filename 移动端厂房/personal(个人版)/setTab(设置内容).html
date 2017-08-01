@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+
+		<style type="text/css">
+			.set-tab a{padding: .5rem 1rem;float: left;font-size: .8rem;border-bottom: 1px solid #fff;}
+			.set-atv{border-bottom: 1px solid #00AE66 !important;color: #00AE66;}
+			.set-con{font-size: .7rem;line-height: 1.3rem;}
+			.set-con>div{display: none;}
+			.set-con >div:nth-child(1){display: block;}
+		</style>
+	</head>
+	<body>
+		<div class="background " id="head">
+			<div class="content">
+				<nav>
+					<div class="logo">
+						<img src="../img/LOGO(1).png" /> 
+					</div>
+					<div>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a>
+					</div>
+					<div style="text-align: right;">
+						<a href=""><i class="iconfont i_big margin_r">&#xe619;</i></a> 
+						<a href=""><i class="iconfont i_big ">&#xe624;</i></a>
+					</div>
+				</nav>
+			</div>
+		    <div class="swiper-container-title"> 
+		        <div class="swiper-wrapper">
+		            <a href="#" class="swiper-slide" data-hash="slide1">个人资料</a>  
+		            <a href="release(发布消息).html#slide2" class="swiper-slide ptc White" data-hash="slide2">发布信息</a>
+		            <a href="#" class="swiper-slide" data-hash="slide3">发布管理</a>
+		            <a href="#" class="swiper-slide" data-hash="slide4">个人资料</a>
+		            <a href="#" class="swiper-slide" data-hash="slide5">发布信息</a>   
+		            <a href="referralinformation(转介信息).html#slide6" class="swiper-slide " data-hash="slide6">发布管理</a>        
+		        </div>  
+		    </div>			
+		</div>
+		<!--内容区域-->	
+		<div id="con" class="background">
+			<div class="content paddingTB">
+				<div class="border set-tab">
+					<a href="#" class="set-atv">联系我们</a>
+					<a href="#">广告联系</a>
+					<div class="clear"></div>
+				</div>
+			</div>
+			<div class="content">
+				<div class="set-con">
+					<div>
+						<center class="font-m paddingTB">厂房帮</center>
+						<span></span>1.技术相关信箱（负责账号及信息处理技术问题）help@1213165.com</p>
+						<p>2.内容合作联系信箱</p>
+						<p>ct@4556565w.com</p>
+						<p>3.市场合作及广告投放</p>
+						<span>&nbsp;&nbsp;76566538(仅负责广告投放及市场合作，如不在线留言)</span>
+						<p>abs@24465w.com</p>
+						<p>&nbsp;&nbsp;电话：1521-583046546</p>
+						<p>工作时间：9:00-18:00</p>
+						<p>(我们收到信息后将在24小时内给你回复)</p>
+					</div>
+					<div>
+						<center class="font-m paddingTB">厂房帮</center>
+						<p>广告咨询请联系QQ：76213415</p>
+						<p>电话：18383838383</p>
+						<p style="margin-top: 2rem;">请注意事项</p>
+						<div>1.本站广告位只接受房产类地产类及相关广告，不接受成人用品，保键用品，医药等等广告。</div>
+						<div>2.宣传位相关的文字和图片允许修改，但每月最多不能超过两次。</div>
+						<div>3.所投广告截至时间到达将自动清除，如需续用，请提前与我站取得联系。</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--内容区域end-->
+		<!--底部菜单-->
+		<center id='bottom' class="font-sx" style="line-height: 1.5rem;color: #C7C7C7;background: #000;">(c) Copyright 2017 厂房帮 粤iCp备 17011034号 </center>
+	</body>
+	<script src="../up/js/imgUp.js"></script>  
+	<script type="text/javascript">
+		$(function(){
+			//头部导航 
+			var swiper = new Swiper('.swiper-container-title', {
+			    pagination: '.swiper-pagination',
+			    slidesPerView: 3,
+			    paginationClickable: true, 
+			    spaceBetween: 30, 
+			    freeMode: true, 
+			    hashnav:true 
+			});
+			
+			$('.set-tab a').click(function(){
+				$(this).addClass('set-atv').siblings().removeClass('set-atv');
+				$('.set-con div').eq($(this).index()).show().siblings().hide();
+			})
+			
+		})
+		
+		
+			var bodyH=$('body').height();//全部
+			var headH=$('#head').height();
+			var bH=$('#bottom').height();//底部高度
+			$('#con').height(bodyH-bH-headH)//内容高度  		
+			
+			var w=$('.content').width();
+			$('.points-list li div').width(w/4.2);
+		</script>	
+</html>
+
+
+
+
+
+

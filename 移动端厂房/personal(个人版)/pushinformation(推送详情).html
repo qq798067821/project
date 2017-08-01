@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>	
+		<link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+		<!--地图-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nHcGETMLia5TsiR9vWPLdTb61LEeTT76"></script>
+		<!--私有-->
+		<style type="text/css">
+			#tabs{padding: .5rem 0;font-size: .8rem;}
+			#tabs>div:nth-child(2) img{width: 100%;padding: .2rem 0;}
+			#tabs>div{display: none;}
+			#tabs>div:nth-child(1){display: block;}   
+			.Modality img{width: 100%;vertical-align: middle;}
+			#allmap {width: 100%;height: 12rem;overflow: hidden;margin:0;font-family:"微软雅黑";}
+		</style>		
+	</head>
+	<body> 
+		<div class="Modality">
+			<img src=""/>
+		</div>  
+		<div class="background " id="head"> 
+			<div class="content">
+				<nav>
+				<div class="logo">
+					<img src="../img/LOGO(1).png"/>
+				</div>
+				<div><a href="#" class="font ">东莞<span class="font-s">[选择城市]</span></a></div> 
+				<div style="text-align: right;">
+					<i class="iconfont i_big margin_r">&#xe619;</i>
+					<i class="iconfont i_big ">&#xe624;</i> 
+				</div> 	
+				</nav>  
+			</div>
+		    <div class="swiper-container-title"> 
+		        <div class="swiper-wrapper">
+		            <a href="#" class="swiper-slide ptc White" data-hash="slide1">个人资料</a>
+		            <a href="#" class="swiper-slide" data-hash="slide2">发布信息</a>
+		            <a href="#" class="swiper-slide" data-hash="slide3">发布管理</a>
+		            <a href="#" class="swiper-slide" data-hash="slide4">个人资料</a>
+		            <a href="#" class="swiper-slide" data-hash="slide5">发布信息</a>  
+		            <a href="referralinformation(转介信息).html#slide6" class="swiper-slide" data-hash="slide6">发布管理</a>     
+		        </div>
+		    </div>			
+		</div>
+		
+		
+		<!--滚动区域-->
+		<div class="swiper-container-vertical">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+				<!--详情标题-->
+				<div class="background">
+					<div class="content">				
+						<div class="heading border">
+							万江全新厂房出租，面积5000平价格16元/m&sup2;有宿舍和办公室						
+							<div><span class="font-s">状态：</span><span class="margin_r font-s bule">进行中</span><span class="font-s">有效时间：</span><span class="font-s red">2017-7-02</span></div> 
+						</div>
+					<!--详情参数-->
+					<div class="content font-m table">  
+						<ul>
+							<li class="activ">
+								<div><span>类别：厂房出租</span></div>
+								<div><span>厂房面积：</span><span class="red">5000m&sup2;</span></div> 
+								<div><span>城市：厂房出租</span></div>
+								<div><span>办公面积：</span><span>500m&sup2;</span></div> 	
+								<div><span>价格：16/元m&sup2</span></div>
+								<div><span>宿舍面积：</span><span>15000m&sup2;</span></div> 
+								<div><span>空地面积：1000m&sup2;</span></div>
+								<div><span>占地面积：</span><span>500m&sup2;</span></div> 									
+							</li>
+							<li>
+								<div><span>建筑结构：钢结构</span></div>
+								<div><span>层数：4层</span></div> 
+								<div><span>跨度：50米</span></div>
+								<div><span>配电量：500kw</span></div> 
+								<div><span>可配电量：500kw</span></div> 
+								<div><span>独院：有</span></div>
+								<div><span>行车：有</span></div>
+								<div><span>新旧程度：有</span></div> 
+							</li>
+							<li>
+								<div><span>电梯：有</span></div>
+								<div><span>最短租期：</span><span class="red">3个月</span></div> 
+								<div><span>分租：可</span></div>
+								<div><span>适用行业：</span><span>电子生产</span></div> 	
+								<div><span>层高：7米</span></div>
+								<div><span>产权：有</span></div>  									
+							</li>								
+						</ul> 
+						<center class="font_ptc">查看更多+</center>
+					</div>
+					
+					<!--详情参数-->		
+					</div>	
+				</div>
+
+				<div class="background margin_t"> 
+					<div class="content">	
+						<div class="RankingList">
+							<div class="content">
+							<a href="#" class="imgTextList bn"> 
+								<img src="../img/1.jpg" class="margin_r"/>  
+								<div>
+									<div><p class="l margin_r">姓名：张晓明</p><div class="l"><i class="iconfont gold font-s">&#xe601;</i><i class="iconfont gold font-s">&#xe601;</i><i class="iconfont gold font-s">&#xe601;</i><i class="iconfont gold font-s">&#xe601;</i><i class="iconfont gold font-s">&#xe601;</i></div></div>
+									<div class="text_small"><span class="l">身份：用户</span><span class="r">需求：23</span></div>	 
+									<span>地区：东莞-万江</span> 
+								</div>
+								<span class="a-s">联系他</span>
+								<div class="Grade">
+									<i class="iconfont White">&#xe60a;7</i>
+								</div>
+								
+							</a>								
+							</div>
+						</div>
+					</div>
+				</div>	
+				<!--详情参数-->	
+				<!--详细描述-->
+
+				<div class="background margin_t border">
+					<div class="content">
+					<div class="title font-m border">
+						<!--选项卡-->
+						<div class="tabList" id='tabList1'>
+							<div class="border-bottom-ptc select" href='tab1'>详细描述</div>
+							<div class="select" href='tab2'>图片</div> 
+							<div class="select" href='tab3'>地图</div> 
+						</div> 
+						<!--选项卡end-->
+						
+						<div  id='tabs'> 
+							<!--描述详情-->
+							<div class="md" id='tab1'>
+								工业厂房，顾名思义，是用于工业生产过程中的房屋。工业厂房除了用于生产的车间，还包括其附属建筑物，如配电房、供水房、排污和设备物资储存等配套房屋，都属于工业厂房的范畴，或工业厂房的一部分。								
+							</div>	
+							<!--描述详情end-->
+							<!--图片-->
+							<div class="md" id='tab2'>
+								<img src="../img/timg.jpg"/>
+								<img src="../img/timg.jpg"/>
+							</div> 
+							<!--图片-->
+							<div class="md" id='tab3'>
+							<div id="allmap"></div>
+							</div> 
+						</div>	
+					</div>							
+					</div>		
+				</div>				
+				<!--详细描述-->
+				<!--猜你喜欢-->
+				<div class="background margin_t">
+					<div class="content">
+						<div class="title font-m border">
+							厂房推荐
+						</div>					
+						<div class="margin_t" id='details'>
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="../img/timg.jpg"/>
+								</div>
+								<img src="../img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="../img/timg.jpg"/>
+								</div>
+								<img src="../img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="../img/timg.jpg"/>
+								</div>
+								<img src="../img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="../img/timg.jpg"/>
+								</div>
+								<img src="../img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>								
+						<div class="clear"></div>	
+						</div>
+						<a href="#" class="more_a margin_t">进入推荐厂房专区</a>
+					</div> 
+				</div>	
+				<!--猜你喜欢end-->
+				<!--看了该厂房还看了-->
+				<div class="background margin_t">
+					<div class="content">
+						<div class="title font-m border">
+							看了该厂房的用户还看了
+						</div> 					
+						<div class="margin_t" id='details'>
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="../img/timg.jpg"/>
+								</div>
+								<img src="../img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p> 
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="../img/timg.jpg"/> 
+								</div>
+								<img src="../img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="../img/timg.jpg"/>
+								</div>
+								<img src="../img/lease.png" class="imgDiv_r"/>	 
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p> 
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a> 	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="../img/timg.jpg"/>
+								</div> 
+								<img src="../img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a> 								
+						<div class="clear"></div>	
+						</div>
+					</div> 
+				<!--文字资讯-->
+				<div class="newList content">
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>								
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>							
+				</div>					
+				<!--文字资讯-->					
+				</div>	
+				<!--看了该厂房还看了end-->
+
+				<!--有钱链接-->
+			<div class="margin_t" >	
+				<div class="content font-s ">
+					镇区直达
+					<div id='Direct' >
+						<a href="#">东城厂房出租</a>
+						<a href="#">南城厂房出租</a>
+						<a href="#">塘厦厂房出租</a>
+						<a href="#">长安厂房出租</a>
+						<a href="#">常平厂房出租</a>
+						<a href="#">企石厂房出租</a>	 	 				
+					</div>					
+				</div>
+			</div>
+			<div class="margin_t" >						
+					<center class="font-s" style="color: #C7C7C7;background: #eee;">(c) Copyright 2017 厂房帮  粤iCp备  17011034号 </center>
+			</div>	
+			<!--友情链接-->
+				<div class="swiper-scrollbar"></div>
+				</div>	 
+			</div>	
+			</div><!--滚动区域end-->
+		</div><!--滚动区域end-->
+		<!--底部菜单-->
+		<div class="background bottom">   
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe603;</i> 
+					<div>首页</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe602;</i>
+					<div>需求信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe68d;</i>
+					<div>发布需求</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe63e;</i>
+					<div>出租信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe62a;</i>
+					<div>个人中心</div>
+				</div>
+			</a>				
+		</div>		
+	</body>
+<script src="../js/Adaptation.js" type="text/javascript" charset="utf-8"></script>	
+<script type="text/javascript">
+$(function(){
+		//头部导航
+		var swiper = new Swiper('.swiper-container-title', {
+		    pagination: '.swiper-pagination',
+		    slidesPerView: 3,
+		    paginationClickable: true,
+		    spaceBetween: 30, 
+		    freeMode: true,
+		    hashnav:true
+		});		
+	
+	
+	var windowHeight=$('body').height()
+	$('.Modality').height(windowHeight)/*模态框高度*/ 
+	
+	/*头部选项卡*/
+	$('#tabList1 div').on('touchstart',function(){
+		$(this).addClass('border-bottom-ptc').siblings().removeClass('border-bottom-ptc') 
+	})
+	
+	/*点击放大图片*/
+	preventtouch('#tab2 img',function(obj){
+		console.log(obj.height())
+		$('.Modality').fadeIn(200).find('img').attr('src',obj.attr('src')); 
+		
+		$('.Modality img').css({'margin-top':($('.Modality').height()-obj.height())/2});
+		$('.Modality').css({'display':'table-cell'})  	 
+	})
+	//隐藏模态
+	$('.Modality').on('touchstart',function(){
+		$(this).fadeOut(200)
+	})
+
+	/*收缩栏*/
+	preventtouch('.table center',function(obj){
+				obj.parent().find('li:gt(0)').fadeToggle(300);   
+				if(obj.html()=='查看更多+')
+				{
+					obj.html("收回-") 
+				}else{
+					obj.html("查看更多+")    
+				} 					
+	})  
+
+	/*描述详情部分的选项卡*/
+	tabs("#tabs");
+	// 百度地图API功能 
+	var map = new BMap.Map("allmap");    // 创建Map实例
+	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
+	map.addControl(new BMap.MapTypeControl());   //添加地图类型控件
+	map.setCurrentCity("北京");          // 设置地图显示的城市 此项是必须设置的
+	map.enableScrollWheelZoom(true);     //开启鼠标滚轮缩放 
+})
+</script>	
+</html>
+

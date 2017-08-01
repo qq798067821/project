@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>	
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<!--私有-->
+		<style type="text/css">
+			#tabs{padding: .5rem 0;font-size: .8rem;}
+			#tabs>div:nth-child(2) img{width: 100%;padding: .2rem 0;}
+			#tabs>div{display: none;}
+			#tabs>div:nth-child(1){display: block;}  
+			.Modality img{width: 100%;vertical-align: middle;}
+			#allmap {width: 100%;height: 12rem;overflow: hidden;margin:0;font-family:"微软雅黑";}
+		</style>		
+	</head>
+	<body> 
+		<div class="Modality">
+			<img src=""/>
+		</div>  
+		<div class="background " id="head"> 
+			<div class="content">
+				<nav>
+				<div class="logo">
+					<img src="img/LOGO(1).png"/>
+				</div>
+				<div><a href="#" class="font ">东莞<span class="font-s">[选择城市]</span></a></div> 
+				<div style="text-align: right;">
+					<i class="iconfont i_big margin_r">&#xe619;</i>
+					<i class="iconfont i_big ">&#xe624;</i> 
+				</div> 	
+				</nav>  
+			</div>
+			<div class="ptc">
+				<div class="content headList"> 
+					<span class="font-s">首页>出租信息>资讯详情</span> 
+				</div>					
+			</div>			
+		</div>
+		
+		
+		<!--滚动区域-->
+		<div class="swiper-container-vertical"> 
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+				<!--详情标题-->
+				<div class="background">
+					<div class="content">				
+						<div class="heading border">
+							东莞确定园区统筹组团发展核心战略
+							<div>
+								<span class="margin_r font-s">更新时间：2017-06-17</span>
+								<span class="font-s margin_r">浏览人数：1011</span>
+								<span class="font-s">来源：南方日报</span>
+							</div>
+						</div>
+
+					</div>	
+				</div>
+				
+				<!--厂房资讯-->
+				
+				<div class="background paddingTB Article" >
+					<div class="content font-sm">
+						7月4日，广东金融高新技术服务区与美国甲骨文公司在佛山南海保利洲际酒店签署甲骨文(佛山)技术人才创新创业基地合作备忘录，并举行甲骨文佛山展示中心的揭牌仪式。佛山保利聚能置业有限公司董事长刘文生、佛山保利聚能置业有限公司总经理周康、南海区副区长乔吉飞、广东金融高新技术服务区发展促进局副局长李志伦、甲骨文全球职业教育项目中国区总经理叶洋、区国土局局长麦绍强、桂城街道办事处主任岑灼雄、区金融办常务副主任李恂瑜等300多位嘉宾参加了本次活动。
+　　						南海区区长顾耀辉致辞时说。
+						<img src="img/timg.jpg"/>
+						为进一步促进全球优质创新创业资源集聚，率先为千灯湖创投小镇产业集聚树立标杆示范作用，深化金融、科技、产业融合发展，南海区举办的“科技让城市更美好”主题活动将有力推动南海区快速溶于粤港澳大湾区的建设。															
+					</div>
+
+				</div>
+				<!--厂房资讯-->
+
+				<!--猜你喜欢-->
+				<div class="background margin_t">
+					<div class="content">
+						<div class="title font-m border">
+							厂房推荐
+						</div>					
+						<div class="margin_t" id='details'>
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>								
+						<div class="clear"></div>	
+						</div>
+						<a href="#" class="more_a margin_t">进入推荐厂房专区</a>
+					</div> 
+				</div>	
+				<!--猜你喜欢end-->
+				<!--看了该厂房还看了-->
+				<div class="background margin_t">
+					<div class="content">
+						<div class="title font-m border">
+							看了该厂房的用户还看了
+						</div>					
+						<div class="margin_t" id='details'>
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>								
+						<div class="clear"></div>	
+						</div>
+					</div> 
+				<!--文字资讯-->
+				<div class="newList content">
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>								
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>							
+				</div>					
+				<!--文字资讯-->					
+				</div>	
+				<!--看了该厂房还看了end-->
+
+				<!--有钱链接-->
+			<div class="margin_t" >	
+				<div class="content font-s ">
+					镇区直达
+					<div id='Direct' >
+						<a href="#">东城厂房出租</a>
+						<a href="#">南城厂房出租</a>
+						<a href="#">塘厦厂房出租</a>
+						<a href="#">长安厂房出租</a>
+						<a href="#">常平厂房出租</a>
+						<a href="#">企石厂房出租</a>	 	 				
+					</div>					
+				</div>
+			</div>
+			<div class="margin_t" >						
+					<center class="font-s" style="color: #C7C7C7;background: #eee;">(c) Copyright 2017 厂房帮  粤iCp备  17011034号 </center>
+			</div>	
+			<!--友情链接-->
+				<div class="swiper-scrollbar"></div>
+				</div>	
+			</div>	
+			</div><!--滚动区域end-->
+		</div><!--滚动区域end-->
+		<!--底部菜单-->
+		<div class="background bottom">   
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe603;</i>
+					<div>首页</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe602;</i>
+					<div>需求信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe68d;</i>
+					<div>发布需求</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe63e;</i>
+					<div>出租信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe62a;</i>
+					<div>个人中心</div>
+				</div>
+			</a>				
+		</div>		
+	</body>
+<script src="js/Adaptation.js" type="text/javascript" charset="utf-8"></script>	
+<script type="text/javascript">
+$(function(){
+var headHeight=$('#head').height();
+var windowHeight=$('body').height() 
+
+
+
+
+
+})
+
+</script>	
+</html>
+

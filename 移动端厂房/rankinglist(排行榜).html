@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+
+		<!--私有-->
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<style type="text/css">
+			.RankingList .imgTextList:nth-child(1) div:nth-child(1) span:nth-child(1){background: red;}
+			.swiper-wrapper .swiper-slide:nth-child(2) a div:nth-child(2),.swiper-wrapper .swiper-slide:nth-child(3) a div:nth-child(2),.swiper-wrapper .swiper-slide:nth-child(4) a div:nth-child(2){width: 11rem;} */
+		</style>
+	</head>
+
+	<body>
+		<div class="Modality">
+			<div class="md" id='tab1'> 
+				<ul>
+					<li>求租</li>
+					<li>求购</li>
+					<li>求租求购</li>
+				</ul>
+			</div>
+			<div class="md" id="tab2">
+				<ul>
+					<li>厂房</li>
+					<li>仓库</li>
+					<li>土地</li>
+				</ul>
+			</div>
+		</div>
+		<div class="background " id="head">
+			<div class="content">
+				<nav>
+					<div class="logo">
+						<img src="img/LOGO(1).png" />
+					</div>
+					<div>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a>
+					</div>
+					<div style="text-align: right;">
+						<i class="iconfont i_big margin_r">&#xe619;</i>
+						<i class="iconfont i_big ">&#xe624;</i>
+					</div>
+				</nav>
+			</div>
+		</div>
+
+		<!--滚动区域-->
+		<div class="swiper-container-vertical">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<div class="ptc">
+						<div class="content headList">
+							
+							<a href="#">首页</a>
+							<a href="#">佣金悬赏</a>
+							<a href="#">附件信息</a>
+							<a href="#">园区信息</a>								
+							<a href="#">转介信息</a>
+							<a href="#">行业资讯</a>
+							<a href="#">推荐厂房</a>
+							<a href="#">更多</a>		 						
+							
+
+						</div>
+					</div>
+					<!--头部列表结束-->
+					<!--热门区域-->
+					<div class="background">
+						<div class="content">
+							<div class="title font-m border">
+								热门区域
+							</div>
+							<div class="fff" id="dropdown">
+								<div class="content font-s paddingTB">
+									<a href="#">莞城区</a>
+									<a href="#">南城区</a>
+									<a href="#">东城区区</a>
+									<a href="#">万江区</a>
+									<a href="#">大岭山</a>
+									<a href="#">厚街</a>
+									<a href="#">虎门</a>
+									<a href="#">沙田</a>
+									<a href="#">寮步</a>
+									<a href="#">莞城区</a>
+									<a href="#">南城区</a>
+									<a href="#">东城区区</a>
+									<a href="#">万江区</a>
+									<a href="#">大岭山</a>
+									<a href="#">厚街</a>
+									<a href="#">虎门</a>
+									<a href="#">沙田</a>
+									<a href="#">寮步</a>
+								</div>
+								<center class="font_ptc  font-m" id="down">查看更多+</center> 
+							</div>
+						</div>
+					</div>
+					<!--热门区域end-->
+					
+					<!--排行榜选项卡-->
+					<div class="background margin_t">
+						<div class="content">
+					<div class="title font-m border">
+						<div class="tabList" id='tabList1'>
+							<div class="border-bottom-ptc">经纪排行</div>
+							<div>需求浏览</div>
+							<div>悬赏排行</div>
+							<div>房源浏览</div>
+						</div>
+					</div>	
+							<div class="swiper-container-horizontal">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">					
+										<div class="RankingList">
+											<a href="#" class="imgTextList">
+												<div>
+													<span class="t">1</span>
+													<img src="img/1.jpg" class="margin_r" />													
+												</div>
+												<div>
+													<div class="l">
+													<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
+													<span>电话：18378433033</span>	
+													<span>厚街-西平</span>
+													</div>
+												</div>
+												<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p> 		
+											</a>
+											<a href="#" class="imgTextList">
+												<div>
+													<span class="t">1</span>
+													<img src="img/1.jpg" class="margin_r" />													
+												</div>
+												<div>
+													<div class="l">
+													<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
+													<span>电话：18378433033</span>	
+													<span>厚街-西平</span>
+													</div>
+												</div>
+												<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p>	
+											</a>
+											<a href="#" class="imgTextList">
+												<div>
+													<span class="t">1</span>
+													<img src="img/1.jpg" class="margin_r" />													
+												</div>
+												<div>
+													<div class="l">
+													<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
+													<span>电话：18378433033</span>	
+													<span>厚街-西平</span>
+													</div>
+												</div>
+												<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p>	
+											</a>
+											<a href="#" class="imgTextList">
+												<div>
+													<span class="t">1</span>
+													<img src="img/1.jpg" class="margin_r" />													
+												</div>
+												<div>
+													<div class="l">
+													<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
+													<span>电话：18378433033</span>	
+													<span>厚街-西平</span>
+													</div>
+												</div>
+												<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p>	
+											</a>
+											<a href="#" class="more_a margin_t">点击查看更多</a>
+										</div>					
+									</div><!--滚动1-->
+									<!--滚动2-->
+									<div class="swiper-slide">					
+										<div class="RankingList">
+											<a href="#" class="imgTextList">
+											<div><span class="t">1</span></div>	
+												<div>		
+													<p>厂房求租一楼300至多多的地方地方大幅度高度是多少感受到</p>
+													<p><span class="margin_r l">南城-西平</span><span class="l">面积：</span> <span class="red l margin_r">5600m&sup2;</span></p>
+						
+												</div>
+												<p class="r"><span class="font-sx">浏览量：</span><span class="font_ptc">2111</span></p>
+											</a>
+											<a href="#" class="imgTextList">
+											<div><span class="t">1</span></div>	
+												<div>		
+													<p>厂房求租一楼300至多多的地方地方大幅度高度是多少感受到</p>
+													<p><span class="margin_r l">南城-西平</span><span class="l">面积：</span> <span class="red l margin_r">5600m&sup2;</span></p>
+						
+												</div>
+												<p class="r"><span class="font-sx">浏览量：</span><span class="font_ptc">2111</span></p>
+											</a>
+											<a href="#" class="imgTextList">
+											<div><span class="t">1</span></div>	
+												<div>		
+													<p>厂房求租一楼300至多多的地方地方大幅度高度是多少感受到</p>
+													<p><span class="margin_r l">南城-西平</span><span class="l">面积：</span> <span class="red l margin_r">5600m&sup2;</span></p>
+						
+												</div>
+												<p class="r"><span class="font-sx">浏览量：</span><span class="font_ptc">2111</span></p>
+											</a>
+											<a href="#" class="imgTextList">
+												<div><span class="t">1</span></div>	
+												<div>
+													<p>厂房求租一楼300至多多的地方地方大幅度</p>
+													<p><span class="margin_r l">南城-西平</span><span class="l">面积：</span> <span class="red l">5600m&sup2;</span></p>
+												</div>
+												<p class="r"><span class="font-sx">浏览量：</span><span class="font_ptc">2111</span></p>
+											</a> 
+											<a href="#" class="more_a margin_t">点击查看更多</a>
+										</div>					
+									</div><!--滚动2-->	
+									<!--滚动3-->
+									<div class="swiper-slide">					
+										<div class="RankingList">											
+											<a href="#" class="imgTextList">
+												<div><span class="t">1</span></div>	
+												<div>
+													<p>厂房求租一楼300至多多的地方地方大幅度</p>
+													<p><span class="margin_r l">截止日期：2017-01-02</span></p>
+												</div>
+												<p><span class="font-sx red">￥15万</span></p>
+											</a> 
+											<a href="#" class="imgTextList">
+												<div><span class="t">1</span></div>	
+												<div>
+													<p>厂房求租一楼300至多多的地方地方大幅度</p>
+													<p><span class="margin_r l">截止日期：2017-01-02</span></p>
+												</div>
+												<p><span class="font-sx red">￥15万</span></p>
+											</a>  
+											<a href="#" class="imgTextList">
+												<div><span class="t">1</span></div>	
+												<div>
+													<p>厂房求租一楼300至多多的地方地方大幅度</p>
+													<p><span class="margin_r l">截止日期：2017-01-02</span></p>
+												</div>
+												<p><span class="font-sx red">￥15万</span></p>
+											</a> 
+											<a href="#" class="imgTextList">
+												<div><span class="t">1</span></div>	
+												<div>
+													<p>厂房求租一楼300至多多的地方地方大幅度</p>
+													<p><span class="margin_r l">截止日期：2017-01-02</span></p>
+												</div>
+												<p><span class="font-sx red">￥15万</span></p>
+											</a> 
+											<a href="#" class="imgTextList">
+												<div><span class="t">1</span></div>	
+												<div>
+													<p>厂房求租一楼300至多多的地方地方大幅度</p>
+													<p><span class="margin_r l">截止日期：2017-01-02</span></p>
+												</div>
+												<p><span class="font-sx red">￥15万</span></p>
+											</a> 										
+											<a href="#" class="more_a margin_t">点击查看更多</a>
+										</div>					
+									</div>									
+									<!--滚动3-->
+									<!--滚动4-->
+									<div class="swiper-slide">					
+										<div class="RankingList">
+											<a href="#" class="imgTextList">
+											<div><span class="t">1</span></div>	
+												<div>		
+													<p>厂房求租一楼300至多多的地方地方大幅度高度是多少感受到</p>
+													<p><span class="margin_r l">南城-西平</span></p>
+						
+												</div>
+												<p class="r"><span class="font-sx">浏览量：</span><span class="font_ptc">2111</span></p>
+											</a>
+											<a href="#" class="imgTextList">
+											<div><span class="t">1</span></div>	
+												<div>		
+													<p>厂房求租一楼300至多多的地方地方大幅度高度是多少感受到</p>
+													<p><span class="margin_r l">南城-西平</span></p>
+						
+												</div>
+												<p class="r"><span class="font-sx">浏览量：</span><span class="font_ptc">2111</span></p>
+											</a>
+											<a href="#" class="imgTextList">
+											<div><span class="t">1</span></div>	
+												<div>		
+													<p>厂房求租一楼300至多多的地方地方大幅度高度是多少感受到</p>
+													<p><span class="margin_r l">南城-西平</span></p>
+						
+												</div>
+												<p class="r"><span class="font-sx">浏览量：</span><span class="font_ptc">2111</span></p>
+											</a>
+											<a href="#" class="imgTextList">
+												<div><span class="t">1</span></div>	
+												<div>
+													<p>厂房求租一楼300至多多的地方地方大幅度</p>
+													<p><span class="margin_r l">南城-西平</span></p>
+												</div>
+												<p class="r"><span class="font-sx">浏览量：</span><span class="font_ptc">2111</span></p> 
+											</a> 
+											<a href="#" class="more_a margin_t">点击查看更多</a> 
+										</div>					
+									</div>									
+									<!--滚动4-->
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<!--下载-->
+					<div class="background margin_t">
+						<div class="content" >
+							<div id="download">
+								<div>
+									<img src="img/down.png"/>
+								</div>
+								
+								<div>
+									<p class="font-m">厂房帮APP</p>
+									<span class="font-sx">工业地产第一股，以有1000使用</span>	
+								</div>
+									<i class="iconfont r font_ptc" >&#xe600;</i>	
+							</div>
+						</div>
+					</div>
+					<!--下载-->
+					<!--有钱链接-->
+					<div class="margin_t">
+						<div class="content font-sx ">
+							镇区直达
+							<div id='Direct'>
+								<a href="#">东城厂房出租</a> 
+								<a href="#">南城厂房出租</a>
+								<a href="#">塘厦厂房出租</a>
+								<a href="#">长安厂房出租</a>
+								<a href="#">常平厂房出租</a>
+								<a href="#">企石厂房出租</a>
+							</div>
+						</div>
+					</div>
+					<div class="margin_t">
+						<center class="font-sx" style="color: #C7C7C7;background: #eee;">(c) Copyright 2017 厂房帮 粤iCp备 17011034号 </center>
+					</div>
+					<!--友情链接-->
+					<div class="swiper-scrollbar"></div>
+				</div>
+			</div>
+			<!--滚动区域end-->
+		</div>
+		<!--滚动区域end-->
+
+		<!--底部菜单-->
+		<div class="background bottom">
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe603;</i>
+					<div>首页</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe602;</i>
+					<div>需求信息</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe68d;</i>
+					<div>发布需求</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe63e;</i>
+					<div>出租信息</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe62a;</i>
+					<div>个人中心</div>
+				</div>
+			</a>
+		</div>
+	</body>
+	<script src="js/Adaptation.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			/*下拉选择*/
+			$('.Modality > div li').on('touchstart', function() {
+				var id = $(this).parents('div').attr('id');
+				var This = $(this);
+
+				$('.form .select').each(function() {
+					if($(this).attr('href') == id) {
+						$(this).text(This.text()); 
+					}
+				})
+			})	
+			Modality('.Modality')/*企业选址的下拉*/
+			/*水平选项卡*/
+			scrollH('#tabList1 div', '.swiper-container-horizontal');
+
+
+			
+			
+		})
+	</script>
+
+</html>

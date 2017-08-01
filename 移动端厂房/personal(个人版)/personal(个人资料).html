@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/> 
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			.tab > div{display: none;}
+			.tab > div:nth-child(1){display: block;}
+			
+			.tab ul{width: 100%;}
+			.tab li{list-style: none;width: 100%;overflow: hidden;border-bottom: 1px solid #EFEFF4;}
+			.tab li >div{text-align: center;float: left;}
+			.tab li>div{font-size: .7rem;line-height: 1.5rem;}
+			.tab .md li:nth-child(1){background: #F5F5F5;}   
+			.tab .md center{display: none;} 
+			.con-comment center{display: none}
+		</style>
+	</head>
+	<body>
+		<div class="background " id="head">
+			<div class="content">
+				<nav>
+					<div class="logo">
+						<img src="../img/LOGO(1).png" /> 
+					</div>
+					<div>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a>
+					</div>
+					<div style="text-align: right;">
+						<a href=""><i class="iconfont i_big margin_r">&#xe619;</i></a> 
+						<a href=""><i class="iconfont i_big ">&#xe624;</i></a>
+					</div>
+				</nav>
+			</div>
+		    <div class="swiper-container-title"> 
+		        <div class="swiper-wrapper">
+		            <a href="#" class="swiper-slide" data-hash="slide1">个人资料</a> 
+		            <a href="#" class="swiper-slide" data-hash="slide2">发布信息</a>
+		            <a href="#" class="swiper-slide" data-hash="slide3">发布管理</a>
+		            <a href="#" class="swiper-slide" data-hash="slide4">个人资料</a>
+		            <a href="#" class="swiper-slide" data-hash="slide5">发布信息</a>   
+		            <a href="referralinformation(转介信息).html#slide6" class="swiper-slide ptc White" data-hash="slide6">发布管理</a>        
+		        </div>
+		    </div>					
+		</div>
+		
+		<!--内容区域-->	
+		<div id="con">
+			<div class="background">
+				<div class="content">
+					<div class="font-s title"> 
+						<img src="../img/me_piture_tishi.png" class="margin_r"/>
+						<span>上次登录时间：2017-06-27</span>
+					</div>
+					<div class="table"> 
+						<p><span>发布总量：</span><span class="bule">50条</span></p>
+						<p>时间间隔：<span class="bule">5分钟/条</span></p>
+						<p>当天发布量：<span class="bule">10条</span></p>
+					</div>
+				</div>				
+			</div>
+			
+			<!--个人信息区-->
+			<div class="background margin_t  idinformation" >
+				<div class="content">
+					<ul>
+						<li>
+							<div class="td">厂房帮头像</div>
+							<div class="td "> <div class="r hui font-big"><img src="../img/1.jpg" class="margin_r"/>&gt;</div></div>
+						</li>  
+						<li>
+							<div class="td">账号</div>
+							<div class="td "> <div class="r"> 1377777997</div></div>
+						</li> 
+						<li>
+							<div class="td">当前积分</div>
+							<div class="td "> <div class="r"> 240</div></div>
+						</li>  	
+						<li>
+							<div class="td">会员等级</div>
+							<div class="td "> <div class="r gold"> V7</div></div>
+						</li>  	
+						<li>
+							<a href="">
+							<div class="td">身份</div>
+							<div class="td "> <div class="r"><span>未认证</span><span class="red font-sx">(马上认证)</span></div></div>
+							</a>
+						</li>  	
+						<li>
+							<a href="">
+							<div class="td">企业</div>
+							<div class="td "> <div class="r"><span>未认证</span><span class="red font-sx">(马上认证)</span></div></div> 
+							</a>
+						</li>  
+						<li>
+							<a href="">
+								<div class="td">个人资料</div>
+								<div class="td "> <div class="r"><span>未完善</span><span class="red font-sx">(马上完善)</span></div></div> 								
+							</a>
+						</li>   						
+					</ul>
+				</div>
+			</div>
+			<!--个人信息区end-->
+			
+			<div class="background margin_t">
+				<div class="content">
+					<div class="title font-m  font">
+						最近发布
+					</div>
+					<div class="title font-m border">
+						<div class="tabList" id='tabList1'>
+							<div class="border-bottom-ptc select" href='tab1'>厂房</div>
+							<div class="select" href='tab2'>仓库</div> 
+							<div class="select" href='tab3'>土地</div>    
+						</div> 
+					</div>
+					
+					<div class="tab paddingTB">
+					<div class="md" id='tab1'>
+						<ul>
+							<li>
+								<div>标题</div>
+								<div>类别</div>
+								<div>时间</div>
+								<div>浏览</div>
+							</li>						
+						</ul>
+						<center class="font-sm paddingTB">暂无数据</center>
+						<a href="#" class="more_a margin_t">点击加载更多</a>  
+					</div>	
+					<div class="md" id='tab2'>
+						<ul>
+							<li>
+								<div>标题</div>
+								<div>类别</div>
+								<div>时间</div>
+								<div>浏览</div>
+							</li>
+							<li>
+								<div class="text-x">秒不地区得到健康</div>
+								<div class="text-x">厂房出租</div>
+								<div class="text-x">2017-07-01</div>
+								<div class="text-x red">20</div>
+							</li>
+							<li>
+								<div class="text-x">秒不地区得到健康</div>
+								<div class="text-x">厂房出租</div>
+								<div class="text-x">2017-07-01</div>
+								<div class="text-x red">20</div>
+							</li>
+							<li>
+								<div class="text-x">秒不地区得到健康</div>
+								<div class="text-x">厂房出租</div>
+								<div class="text-x">2017-07-01</div>
+								<div class="text-x red">20</div>
+							</li>								
+						</ul>
+						
+						<a href="#" class="more_a margin_t">点击加载更多</a>
+					</div>	
+					<div class="md" id='tab3'>
+						<ul>
+							<li>
+								<div>标题</div>
+								<div>类别</div>
+								<div>时间</div>
+								<div>浏览</div>
+							</li>
+							<li>
+								<div class="text-x">秒不地区得到健康</div> 
+								<div class="text-x">厂房出租</div>
+								<div class="text-x">2017-07-01</div>
+								<div class="text-x red">20</div>
+							</li>
+							<li>
+								<div class="text-x">秒不地区得到健康</div>
+								<div class="text-x">厂房出租</div>
+								<div class="text-x">2017-07-01</div>
+								<div class="text-x red">20</div>
+							</li>							
+						</ul>
+						<a href="#" class="more_a margin_t">点击加载更多</a>
+					</div>	 					
+					</div>
+				</div>
+			</div>
+			<!--我的评论-->
+			<div class="background">
+				<div class="content  con-comment">
+					<div class="title font-m border  font">
+						我的评论
+					</div>
+					
+					<a href="#" class="comment border">
+						<div><img src="../img/1.jpg"/></div>
+						<div>
+							<div class="font-m">
+								<div class="td">茄子的世界</div><div class="td">06-27</div>
+							</div>
+							<p class="font-s">的巨大的空间得到健康的角度看大家看得见的空间打开大家看得见的空间打开的即可</p>
+							<p class="font-s">评价：<i class="iconfont font-s gold">&#xe601;</i><i class="iconfont gold font-s">&#xe601;</i></p>
+						</div>
+						
+					</a>
+					
+					<a href="#" class="comment border">
+						<div><img src="../img/1.jpg"/></div>
+						<div>
+							<div class="font-m">
+								<div class="td">茄子的世界</div><div class="td">06-27</div>
+							</div>
+							<p class="font-s">的巨大的空间得到健康的角度看大家看得见的空间打开大家看得见的空间打开的即可</p>
+							<p class="font-s">评价：<i class="iconfont font-s gold">&#xe601;</i><i class="iconfont gold font-s">&#xe601;</i></p>
+						</div>	  
+					</a>
+					<center class="paddingTB font-sm">暂无数据</center>
+					
+				</div>
+			</div>
+			<!--我的评论end-->
+				
+			<!--有钱链接-->
+			<div class="margin_t content paddingTB" >	
+				<div class="content font-s ">
+					镇区直达
+					<div id='Direct' > 
+						<a href="#">东城厂房出租</a>
+						<a href="#">南城厂房出租</a>
+						<a href="#">塘厦厂房出租</a>
+						<a href="#">长安厂房出租</a>
+						<a href="#">常平厂房出租</a>
+						<a href="#">企石厂房出租</a>	 	 				
+					</div>					
+				</div>
+			</div>
+			<!--有钱链接-->
+		</div>
+
+		
+		<!--底部菜单-->
+		<center id='bottom' class="font-sx" style="line-height: 1.5rem;color: #C7C7C7;background: #000;">(c) Copyright 2017 厂房帮 粤iCp备 17011034号 </center>
+		
+	</body>
+	
+	<script type="text/javascript">
+		$(function(){ 
+		//头部导航 
+		var swiper = new Swiper('.swiper-container-title', {
+		    pagination: '.swiper-pagination',
+		    slidesPerView: 3,
+		    paginationClickable: true, 
+		    spaceBetween: 30, 
+		    freeMode: true, 
+		    hashnav:true
+		});	 			
+						
+						
+			
+			  
+			var bodyH=$('body').height();//全部 
+			var headH=$('#head').height();
+			var bH=$('#bottom').height();//底部高度
+			$('#con').height(bodyH-bH-headH)//内容高度  
+			
+			/*头部选项卡*/
+			$('#tabList1 div').on('touchstart',function(){
+				$(this).addClass('border-bottom-ptc').siblings().removeClass('border-bottom-ptc')  
+			})			
+		})
+
+			/*选项卡*/
+			tabs('.tab')
+			function tabs(obj){
+			 	$('.select').on('touchstart',function(){
+			 		var tab=$(this).attr('href');
+			 		$(obj+'> div').each(function(){
+			 			if($(this).attr('id')==tab)
+			 			{
+			 				$(this).show(); 
+			 			}else{
+			 				$(this).hide();
+			 			}
+			 		}) 
+			 	})	 
+			}
+			nothing()
+			function nothing(){
+				$('.md').each(function(){
+					var len=$(this).find('li').length;
+					if(len==1){
+						$(this).find('center').show();
+						$(this).find('a').hide();
+					}
+				})
+							
+			}
+			
+			if($('.con-comment').find('.comment').length==0)
+			{
+				$('.con-comment').find('center').show();
+			}
+			
+			//设置最近发部各表单的长度
+			var w= $('.tab').width();
+			$('.tab li>div').width(w/4.2); 
+
+
+	</script>	
+</html>

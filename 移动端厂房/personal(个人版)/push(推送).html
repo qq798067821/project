@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link href="../up/css/common.css" type="text/css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="../up/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+
+		<style type="text/css">
+			.pusha{display: block;color: #191919;position: relative;font-size: .8rem;}
+			.pusha img{height: 2rem;}
+			.pusha>img{position: absolute;right: 5%;top: 40%;height: 1rem;}
+
+			
+			/*垂直居中*/
+			.Verticalcentering{height: 4rem;}
+		</style>
+	</head>
+	<body>
+		<div class="background " id="head">
+			<div class="content">
+				<nav>
+					<div class="logo">
+						<img src="../img/LOGO(1).png" /> 
+					</div>
+					<div>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a>
+					</div>
+					<div style="text-align: right;">
+						<a href=""><i class="iconfont i_big margin_r">&#xe619;</i></a> 
+						<a href=""><i class="iconfont i_big ">&#xe624;</i></a>
+					</div>
+				</nav>
+			</div>
+		    <div class="swiper-container-title"> 
+		        <div class="swiper-wrapper">
+		            <a href="#" class="swiper-slide" data-hash="slide1">个人资料</a> 
+		            <a href="release(发布消息).html#slide2" class="swiper-slide ptc White" data-hash="slide2">发布信息</a>
+		            <a href="#" class="swiper-slide" data-hash="slide3">发布管理</a>
+		            <a href="#" class="swiper-slide" data-hash="slide4">个人资料</a>
+		            <a href="#" class="swiper-slide" data-hash="slide5">发布信息</a>   
+		            <a href="referralinformation(转介信息).html#slide6" class="swiper-slide " data-hash="slide6">发布管理</a>        
+		        </div>
+		    </div>			
+		</div>
+		<!--内容区域-->	
+		<div id="con" class="background">
+			<div class="content">
+				<a href="#" class="pusha border">
+					<div>
+						<div class="Verticalcentering">
+							<img src="../img/me_icon_push_demand.png"/>
+							<span>需求推送</span>
+							(<span class="red">20</span>) 
+						</div> 
+					</div>
+					<img src="../img/me_icon_more.png"/>
+				</a>
+				
+				<a href="#" class="pusha border">
+					<div>
+						<div class="Verticalcentering">
+							<img src="../img/me_icon_push_reward.png"/>
+							<span>需求推送</span>
+							(<span class="red">20</span>) 
+						</div> 
+					</div>
+					<img src="../img/me_icon_more.png"/>
+				</a>
+				
+				<a href="#" class="pusha border">
+					<div>
+						<div class="Verticalcentering">
+							<img src="../img/me_icon_push_buy.png"/>
+							<span>需求推送</span>
+							(<span class="red">20</span>) 
+						</div> 
+					</div>
+					<img src="../img/me_icon_more.png"/>
+				</a>				
+				
+			</div>
+		</div>
+		<!--内容区域end-->
+
+
+		
+		<!--底部菜单-->
+		<center id='bottom' class="font-sx" style="line-height: 1.5rem;color: #C7C7C7;background: #000;">(c) Copyright 2017 厂房帮 粤iCp备 17011034号 </center>
+		
+	</body>
+	<script src="../up/js/imgUp.js"></script>  
+	<script type="text/javascript">
+		$(function(){
+		//头部导航 
+		var swiper = new Swiper('.swiper-container-title', {
+		    pagination: '.swiper-pagination',
+		    slidesPerView: 3,
+		    paginationClickable: true, 
+		    spaceBetween: 30, 
+		    freeMode: true, 
+		    hashnav:true
+		});	 			
+			
+			var bodyH=$('body').height();//全部
+			var headH=$('#head').height();
+			var bH=$('#bottom').height();//底部高度
+			$('#con').height(bodyH-bH-headH)//内容高度  
+		})
+		
+	</script>	
+</html>
+
+
+

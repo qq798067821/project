@@ -1,0 +1,90 @@
+*{margin: 0;padding: 0;}
+html{height: 100%;}
+body{font-size: 14px;font-family: "微软雅黑";height: 100%;color: #4c4c4c;}  
+.center{width: 100%;margin: auto;} 
+a{text-decoration: none;}
+textarea{resize: none;outline: none;padding: 5px;}
+input{outline: none;}
+input[type=submit]{cursor: pointer;}
+select{outline: none;} 
+.all{width: 100%;background: rgb(244,244,244);padding: 20px 0;height: auto;min-height: 820px;}
+.alls{width: 1000px;height: auto;clear: both;margin: auto;}
+.clear{clear: both;}	
+.hid{display: block;}
+	
+.l{float: left;}
+.r{float: right;}
+.mag{margin: 20px 0;}
+.born{border: none !important;}/*去掉边框*/  
+.pno{padding: 0;}
+.mar{margin-right: 20px;}
+
+/*字体*/
+.imp{font-size: 16px;}/*有点重点的字体*/
+.red{color: red !important;}/*红色字体*/
+.v_m{vertical-align: top;margin-right: 5px;}/*字和图位置*/  
+.h{color: #666;}/*很汗*/ 
+.big{font-size: 18px;font-weight: 600;}   
+.gold{color: gold;}/*金色字体*/
+.font-s{font-size: 12px !important;}
+.bule{color: #725BDE !important;}/*蓝色字体*/ 
+.text_x{word-wrap:break-word; word-break:break-all;text-overflow:ellipsis;}/*换行需加长度*/
+.text_sx{display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;}/*不换行*/
+.abut{width: 160px;line-height: 35px;display: block;float: left;text-align: center;color: #fff;}
+
+/*仿tabal*/
+.tr{width: 100%;overflow: hidden;padding: 10px 0;}
+.tda{width: 100%;overflow: hidden;}
+.td{width: 50%;}
+.tada,.td{float: left;}  
+.tsp{width: 100px;float: left;display: inline-block;text-align: right;vertical-align: middle;line-height: 30px;}
+.selector{width: 150px;padding: 2px 5px;float: left;margin-right: 5px;height: 30px;}
+.inptext{padding: 2px 5px;width:125px;float: left;margin-right: 5px;height: 30px;}
+.selector_s{padding: 2px 5px;float: left;margin-right: 5px;width: 100px;height: 30px;}
+.t_p{float: left;margin-top: 5px;margin-left: 8px;}
+.inptext_big{width: 400px;padding: 2px 10px;height: 30px;}/*大输入*/ 
+.inptext_sm{width: 200px;padding: 2px 10px;height: 30px;float: left;}
+.abutTj{width: 200px;line-height: 40px;display: block;float: left;text-align: center;color: #fff;}
+.text_de:hover{text-decoration: underline;}/*加下划线*/
+.curpo{cursor: pointer;}/*改变鼠标*/
+label{line-height: 30px;}
+.checkbox label{margin-right: 5px;display: inline-block;} 
+.checkbox div{width: 85%;}  
+
+/*头部*/
+.y_head{height: 80px;}
+.y_logo{height: 100%;width: 300px;float: left;}
+.y_logo img{margin-top: 10px;}
+.y_head_r{float: right;}
+.y_head nav{margin-top: 8px;}
+.y_head nav a{float: left;color: #fff;margin-right: 28px;font-size: 16px;}
+.y_head nav a:nth-last-child(1){margin-right: 0 ;} 
+
+/*脚*/
+.y_foot{background: #191919;}
+.y_foot center{color: #EEEEEE;line-height: 35px;font-size: 10px;word-spacing: 5px;} 
+
+/*头像*/
+.Headp_big{width: 135px !important;height: 140px !important;}
+/*字的行高*/
+.font_lh{line-height: 30px;}
+/*字体*/
+.font_s{font-size: 14px !important;}
+/*背景色*/
+.lv{background:#00ae66 !important }
+.themeBackground{background: #00AE66 !important;}/*主题颜色*/ 
+/*字体色*/
+.font_lv{color: #00AE66  !important;}
+.font_lv:hover{color: red;}
+.fff{color: #fff !important;}
+/*按钮*/
+.button_sm{width: 150px;line-height: 30px;display: inline-block;position: relative;overflow: hidden;color: #4c4c4c;text-align: center;background:#EDEDED;border: none;}  
+.button_s{width: 100px;line-height: 30px;display: inline-block;position: relative;overflow: hidden;color: #4c4c4c;text-align: center;background:#EDEDED;} 
+.bor{border: 1px solid #00AE66 !important;background: #fff !important;}/*绿色边框 */
+
+
+.file{padding: 1000px;position: absolute;left: -10px;top: -10px;}/*上传的按钮*/
+.cancel{height: 25px;width: 25px;border-radius: 25px;line-height: 25px;text-align: center;position: absolute;} 
+.ts{display: none;}  
+.lod{height: 30px;display: none;}  
+#mt{width: 100%;background: rgba(0,0,0,0);position:absolute;z-index: 20;}   /*模态*/   

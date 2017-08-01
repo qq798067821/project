@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>	
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+
+		<!--私有-->
+		<style type="text/css">
+			#tabs{padding: .5rem 0;font-size: .8rem;}
+			#tabs>div:nth-child(2) img{width: 100%;padding: .2rem 0;}
+			#tabs>div{display: none;}
+			#tabs>div:nth-child(1){display: block;}  
+			.Modality img{width: 100%;vertical-align: middle;}
+			#allmap {width: 100%;height: 12rem;overflow: hidden;margin:0;font-family:"微软雅黑";}
+			
+			#bannerList a{color: #191919;padding: .3rem 0;}
+			#bannerList li:nth-child(-n+4){display: block;} 	
+			.list-small-iocon{vertical-align: middle;}
+			
+			/*轮播图*/
+			.swiper-container-banner .swiper-slide img{width: 100%;height: 8rem;} 
+			.swiper-container-banner {position: relative;}
+						
+		</style>		
+	</head>
+	<body> 
+		<div class="background " id="head"> 
+			<div class="content">
+				<nav>
+				<div class="logo">
+					<img src="img/LOGO(1).png"/>
+				</div>
+				<div><a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a></div> 
+				<div style="text-align: right;">
+					<i class="iconfont i_big margin_r">&#xe619;</i>
+					<i class="iconfont i_big ">&#xe624;</i> 
+				</div> 	
+				</nav>  
+			</div>
+			<div class="ptc">
+				<div class="content headList"> 
+					<span class="font-sx">首页>行业资讯</span>
+				</div>					
+			</div>			
+		</div>
+		
+		
+		<!--滚动区域-->
+		<div class="swiper-container-vertical">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+				<!--banner-->
+		<div class="swiper-container-banner">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">				
+				<img src="img/banner02-min.jpg" />
+				</div>
+				<div class="swiper-slide">				
+				<img src="img/banner03-min.jpg" />
+				</div>
+				
+			</div>
+			<div class="swiper-pagination"></div>
+		</div>		
+				<!--banner-->					
+				<!--详情标题-->
+				<div class="background">
+					<div class="content">	
+					<!--头部列表-->
+					<div class="content font-m table" id='bannerList'>
+						<ul>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#"><img src="img/new.png" class="list-small-iocon"/>黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#"><img src="img/new.png" class="list-small-iocon"/>黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>	
+							<li class="activ">
+								<a href="#"><img src="img/new.png" class="list-small-iocon"/>黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#"><img src="img/new.png" class="list-small-iocon"/>黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#"><img src="img/new.png" class="list-small-iocon"/>黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>								
+						</ul>
+						<center class="font_ptc">查看更多+</center>
+					</div>			
+					<!--头部列表-->	
+					</div>	
+				</div>
+
+				<!--市场分析-->
+				<div class="background margin_t">
+					<div class="content">	
+						<div class="title font-m border">
+							市场分析
+						</div>
+					<div class="font-m table" id='bannerList'>
+						<ul>
+							<li class="activ">
+							<a href="#" class="imgTextList bn">
+								<div class="imgTextList_img">
+									<img src="img/timg.jpg"/>
+								</div>
+								<div class="text">
+									<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p> 
+									<div class="Specialline font-s font">
+										<span class="margin_r">东莞-横沥  </span><span>类型：厂房</span>
+									</div>
+									<div class="font-sx Specialline"> 
+										<span class="margin_r">12小时前</span><span >浏览人数：2200</span>
+									</div>											
+								</div>			
+							</a><!--循环a标签-->									
+							</li>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>	
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>								
+						</ul>
+						<center class="font_ptc">查看更多+</center>
+					</div>			
+					<!--头部列表-->	
+					</div>	
+				</div>		 		
+				<!--市场分析end-->
+				
+				<!--行业动态-->
+				<div class="background margin_t">
+					<div class="content">	
+						<div class="title font-m border">
+							行业动态
+						</div>
+					<div class="font-m table" id='bannerList'>
+						<ul>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>	
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>	
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>	
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>	
+							<li class="activ">
+								<a href="#">黄江区尤胜利科技园火热招租中，亲们快啊啊啊啊</a>
+							</li>							
+						</ul>
+						<center class="font_ptc">查看更多+</center>
+					</div>			
+					<!--头部列表-->	
+					</div>	
+				</div>					
+				<!--行业动态-->
+
+				<!--猜你喜欢-->
+				<div class="background margin_t">
+					<div class="content">
+						<div class="title font-m border">
+							厂房推荐
+						</div>					
+						<div class="margin_t" id='details'>
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText">  
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>								
+						<div class="clear"></div>	
+						</div>
+						<a href="#" class="more_a margin_t">进入推荐厂房专区</a>
+					</div> 
+				</div>	
+				<!--猜你喜欢end-->
+				<!--看了该厂房还看了-->
+				<div class="background margin_t">
+					<div class="content">
+						<div class="title font-m border">
+							看了该厂房的用户还看了
+						</div>					
+						<div class="margin_t" id='details'>
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>								
+						<div class="clear"></div>	
+						</div>
+					</div> 
+				<!--文字资讯-->
+				<div class="newList content">
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>								
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>	
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>						
+				</div>					
+				<!--文字资讯-->					
+				</div>	
+				<!--看了该厂房还看了end-->
+
+				<!--有钱链接-->
+			<div class="margin_t" >	
+				<div class="content font-sx ">
+					镇区直达
+					<div id='Direct' >
+						<a href="#">东城厂房出租</a>
+						<a href="#">南城厂房出租</a>
+						<a href="#">塘厦厂房出租</a>
+						<a href="#">长安厂房出租</a>
+						<a href="#">常平厂房出租</a>
+						<a href="#">企石厂房出租</a>	 	 				
+					</div>					
+				</div>
+			</div>
+			<div class="margin_t" >						
+					<center class="font-sx" style="color: #C7C7C7;background: #eee;">(c) Copyright 2017 厂房帮  粤iCp备  17011034号 </center>
+			</div>	
+			<!--友情链接-->
+				<div class="swiper-scrollbar"></div>
+				</div>	
+			</div>	
+			</div><!--滚动区域end-->
+		</div><!--滚动区域end-->
+		<!--底部菜单-->
+		<div class="background bottom">   
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe603;</i>
+					<div>首页</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe602;</i>
+					<div>需求信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe68d;</i>
+					<div>发布需求</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe63e;</i>
+					<div>出租信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe62a;</i>
+					<div>个人中心</div>
+				</div>
+			</a>				
+		</div>		
+	</body>
+<script src="js/Adaptation.js" type="text/javascript" charset="utf-8"></script>	
+<script type="text/javascript">
+$(function(){
+var headHeight=$('#head').height();
+var windowHeight=$('body').height();
+
+/*收缩栏*/
+preventtouch('.table center',function(obj){
+			obj.parent().find('li:gt(4)').fadeToggle(300);
+			if(obj.html()=='查看更多+')
+			{
+				obj.html("收回-") 
+			}else{
+				obj.html("查看更多+")  
+			}					
+}) 
+
+
+/*banner*/
+banner();
+function banner(){
+var mySwiper2 = new Swiper('.swiper-container-banner',{
+autoplay : 4000,
+loop : true ,
+autoplayDisableOnInteraction : false,
+pagination : '.swiper-pagination'
+})
+}
+}) 
+
+</script>	
+</html>
+
+

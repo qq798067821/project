@@ -1,0 +1,115 @@
+﻿<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="css/css.css"/>
+    <link rel="stylesheet" href="css/LArea.css">
+	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <title></title>
+    <style type="text/css">
+    input {
+        width: 85%;
+        height: 2rem;
+        border: 1px solid #eee;
+        border-radius: 5px;
+        margin: 1rem auto;
+        font-size: .7rem;
+        color: #555;
+        display: block;
+        text-align: center;
+    }
+    
+    h1 {
+        background-color: #b72f20;
+        color: #fff;
+        font-size: .7rem !important;
+        text-align: center;
+    }
+    
+    #tj{width: 85%;}
+    </style>
+    
+</head>
+
+<body>
+		<div class="background " id="head">  
+			<div class="content">
+				<nav>
+				<div class="logo">
+					<img src="img/LOGO(1).png"/>
+				</div>
+				<div><a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a></div> 
+				<div style="text-align: right;">
+					<i class="iconfont i_big margin_r">&#xe619;</i>
+					<i class="iconfont i_big ">&#xe624;</i> 
+				</div> 	
+				</nav>  
+			</div>
+			<div class="ptc">
+				<div class="content headList"> 
+					<span class="font-sx">首页>出租信息>出租详情</span>
+				</div>					
+			</div>			
+		</div>	
+    <div>
+        <div class="content-block"> 
+            <input id="demo1" type="text" readonly="" placeholder="城市选择特效"  value="广东省-深圳市-南山区"/>
+            <input id="value1" type="hidden" value="20,234,504"/>
+            
+        </div>
+        <a href="#" class="link_a ptc" id="tj">确定</a>
+<!--         <div class="content-block">
+            <input id="demo2" type="text" readonly="" placeholder="城市选择特效" />
+            <input id="value2" type="hidden" />
+    	 </div>-->
+    <script src="js/LAreaData1.js"></script>
+    <script src="js/LAreaData2.js"></script> 
+    <script src="js/LArea.js"></script>
+    <script type="text/javascript">
+   $(function() {
+	setRem(); /*请不用管*/
+	window.addEventListener("orientationchange", setRem);
+	window.addEventListener("resize", setRem);
+
+	function setRem() {
+		var html = document.querySelector("html");
+		var width = html.getBoundingClientRect().width;
+		html.style.fontSize = width / 20 + "px"; 
+	}
+	var windowHeight = $(window).height();
+	var headHeight = $('#head').height();
+	$('.scroll-body').height(windowHeight - headHeight);  
+	})
+
+var area1 = new LArea();
+area1.init({'trigger': '#demo1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+	    'valueTo': '#value1', //选择完毕后id属性输出到该位置
+	    'keys': {
+	        id: 'id',
+	        name: 'name'
+	    }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+	    'type': 1, //数据源类型
+	    'data': LAreaData //数据源
+	});
+	area1.value=[1,15,3];//控制初始位置，注意：该方法并不会影响到input的value 
+	var area2 = new LArea();
+	area2.init({
+	    'trigger': '#demo2',  
+	    'valueTo': '#value2',
+	    'keys': {
+	        id: 'value',
+	        name: 'text'
+	    },
+	    'type': 1,
+	    'data': [provs_data+'-'+citys_data+'-'+dists_data]   
+	});
+    </script>
+</body>
+
+</html>

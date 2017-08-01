@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css" />
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css" />
+		<link rel="stylesheet" type="text/css" href="css/css.css" />
+		<!--地图-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nHcGETMLia5TsiR9vWPLdTb61LEeTT76"></script>
+		<!--私有-->
+		<style type="text/css">
+			body> #center {
+				line-height: 2rem;
+				position: fixed;
+				bottom: 0;
+				width: 100%;
+			}
+			
+			#maps {
+				height: 20rem;
+				width: 100%;
+			}
+			
+			#allmap {
+				width: 100%;
+				height: 100%;
+				overflow: hidden;
+				margin: 0;
+				font-family: "微软雅黑";
+			}
+			
+			#nearnylist {
+				height: 50%;
+				width: 100%;
+				overflow: scroll;
+			}
+			
+			.Modality {
+				display: block;
+				overflow: initial;
+			}
+
+			.Modality .scroll-imgList {
+				width: 100%;
+				background: #fff;
+				position: absolute;
+				bottom: 0;
+			}
+			/*底部*/
+			
+			.maplist {
+				position: relative;
+				background: #fff;
+			}
+			/*信息小圆圈*/
+			
+			.content {
+				position: relative;
+			}
+			
+			.o {
+				height: 2rem;
+				width: 2rem;
+				border-radius: 2rem;
+				line-height: 2rem;
+				color: #fff;
+				position: absolute;
+				font-size: .7rem;
+				text-align: center;
+				right: 1rem;
+				top: -1.5rem;
+				z-index: 10;
+			}
+			.swiper-container-vertical{height: 100%;width: 100%;}
+			.swiper-scrollbar{width: 1rem;}
+			.loding{width: 100%;} 
+			.loding img{width: 1rem;margin: auto;display: block;} 
+		</style>
+	</head>
+
+	<body>
+		<div class="background " id="head">
+			<div class="content">
+				<nav>
+					<div class="logo">
+						<img src="img/LOGO(1).png" />
+					</div>
+					<div>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a>
+					</div>
+					<div style="text-align: right;">
+						<i class="iconfont i_big margin_r">&#xe619;</i>
+						<i class="iconfont i_big ">&#xe624;</i>
+					</div>
+				</nav>
+			</div>
+			<div class="ptc">
+				<div class="content headList">
+					<span class="font-sx">首页>附近资源</span>
+				</div>
+			</div>
+		</div>
+
+		<!--地图-->
+		<div id='maps'>
+			<div id="allmap"></div>
+		</div>
+		<!--地图-->
+		<!--地图列表-->
+		<div class="Modality">
+			<div class="scroll-imgList">
+				<div class="o ptc">56</div>
+		<div class="swiper-container-vertical ">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide content">
+					<a href="#" class="imgTextList" >
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span> 
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span>
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>
+					<a href="#" class="imgTextList" > 
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span> 
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span>
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>					
+					<!--循环a标签-->					
+					<a href="#" class="imgTextList" >
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span> 
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span>
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>
+					<!--循环a标签-->
+
+					<a href="#" class="imgTextList">
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span>
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span>
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>
+					<!--循环a标签-->
+					<a href="#" class="imgTextList">
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span>
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span>
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>
+					<!--循环a标签-->
+					<a href="#" class="imgTextList">
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span>
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span> 
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>
+					<!--循环a标签--> 
+					<a href="#" class="imgTextList">
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span> 
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span>
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>
+					<!--循环a标签-->
+					<a href="#" class="imgTextList">
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span>
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span>
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>
+					<!--循环a标签-->
+					<a href="#" class="imgTextList">
+						<div class="imgTextList_img">
+							<img src="img/timg.jpg" />
+							<img src="img/lease.png" class="imgDiv_r" />
+						</div>
+						<div class="text">
+							<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+							<div class="font-s Specialline">
+								<span>地区：东莞-横沥  </span><span class="r">14m&sup2</span>
+							</div>
+							<div class="font-s Specialline">
+								<span>更新时间：12小时前</span>
+								<div class="r"><span>面积：</span> <span class="red">100m&sup2</span></div>
+							</div>
+						</div>
+					</a>
+					<!--循环a标签-->
+					<a href="#" class="imgTextList loding bn">
+							<img src="img/lod.gif" alt=""  />						
+					</a>
+					
+				</div>
+
+				
+				<div class="swiper-scrollbar"></div>
+				</div>
+			</div>
+			</div>
+		</div>		
+		<!--地图列表-->
+		<center id="center" class="font-m font_ptc background">查看更多+</center>
+	</body>
+	<script src="js/nearby.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function() {
+			var headHeight = $('#head').height();/*头部的高度*/
+			var bodyHeight = $('body').height()/*body的高度*/
+			var centerHeight = $('#center').height();/*底部的高度*/
+			var imgTextListHeight=$('.imgTextList').outerHeight();/*一个子列表高度*/
+			
+			$('.Modality').height(bodyHeight - centerHeight) /*模态框高度*/
+			/*模态框里的div高度*/
+			$('.scroll-imgList').height(bodyHeight-headHeight-centerHeight)		
+			
+			/*设置地图高度*/
+			var maplistHeight = $('.maplist').height();
+			$('#maps').height(bodyHeight - headHeight - imgTextListHeight - centerHeight)
+			/*模态框初始化状态*/	
+			$('.scroll-imgList').height(imgTextListHeight)/*初始化模态框*/
+			$('.Modality').height(imgTextListHeight); /*初始化模态框*/
+			$('.Modality').css({'bottom':centerHeight});
+			$('.swiper-slide a:gt(0)').css({'display':'none'})/*初始化模态框*/	 
+			
+			
+			//防止过快点击
+			var t=0;
+			$('#center').on('touchstart',function(){
+				this.t=new Date().getTime();
+				if(this.t-t<600)
+				{			
+					console.log(this.t-t)  
+					t=this.t;
+				}else{
+					t=this.t;
+					if(!this.kes){ 
+						$('.scroll-imgList').height(bodyHeight-headHeight-centerHeight);		
+						$('.Modality').animate({'height':bodyHeight - centerHeight}) // height(bodyHeight - centerHeight) /*模态框高度*/
+						$('.Modality').css({'position':'absolute'})
+						$('.Modality').animate({'top':0},100) 
+						$('.swiper-slide a:gt(0)').css({'display':'block'})
+						this.kes=true; 					
+					}else{
+						$('.scroll-imgList').height(imgTextListHeight)/*初始化模态框*/
+						$('.Modality').height(imgTextListHeight); /*初始化模态框*/
+						$('.swiper-slide a:gt(0)').css({'display':'none'})/*初始化模态框*/
+						$('.Modality').css({'bottom':centerHeight,'top':''});  
+						this.kes=false; 					
+					}					
+				}
+				
+			})
+			
+
+			
+			// 百度地图API功能
+			var map = new BMap.Map("allmap"); // 创建Map实例
+			map.centerAndZoom(new BMap.Point(116.404, 39.915), 11); // 初始化地图,设置中心点坐标和地图级别
+			map.addControl(new BMap.MapTypeControl()); //添加地图类型控件
+			map.setCurrentCity("北京"); // 设置地图显示的城市 此项是必须设置的
+			map.enableScrollWheelZoom(true); //开启鼠标滚轮缩放 
+		})
+	</script>
+
+</html>

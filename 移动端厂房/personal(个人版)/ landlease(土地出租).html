@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+
+		<style type="text/css">
+			.Essentialinformation .span{font-size: .8rem;float: left !important;}
+			.Essentialinformation input[type=text]{float: left;}
+			.Essentialinformation > div{margin: .7rem 0;overflow: hidden;} 
+			.select select{float: left;margin-top: .2rem;}
+			.select select:nth-child(1){margin-top: 0;}
+			label{font-size: .7rem;line-height: 1.5rem;vertical-align: middle;}
+			label input[type=radio]{vertical-align: middle;}
+			textarea{width: 9.8rem;padding: .2rem;height: 4rem;}
+			
+			
+			/*上传图片部分*/ 
+			.up-files{width: 11rem;}
+			.up-files i{float: left;}
+			.up-files i:nth-child(even){float: right;}
+			.up-files i:nth-child(n+3){margin-top: .5rem;}
+			.up-img{height: 5.5rem ; width: 5rem;text-align: center;display: block;background: url(../img/upimg.png);background-size: 100% 100%;position: relative;overflow: hidden;}
+			.up-img>*{position: absolute;}
+			.up-img img{height: 100%;width: 100%;top: 0;left: 0;z-index: 10;}
+			.up-img input[type=file]{padding: 100rem;left: -10rem;top:-10rem}
+		</style>
+	</head>
+	<body>
+		<div class="background " id="head">
+			<div class="content">
+				<nav>
+					<div class="logo">
+						<img src="../img/LOGO(1).png" /> 
+					</div>
+					<div>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a> 
+					</div>
+					<div style="text-align: right;">
+						<a href=""><i class="iconfont i_big margin_r">&#xe619;</i></a> 
+						<a href=""><i class="iconfont i_big ">&#xe624;</i></a>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--内容区域-->	
+		<div id="con">
+			<div class="background ">
+				<div class="content">
+					<div class="title font-m  bule title-border">
+						土地出租
+					</div>
+				</div>
+			</div>
+			<!--基本信息-->
+			<div class="background">
+				<div class="title content font-sm  border">
+					基本信息
+				</div>				
+				<div class="content Essentialinformation">
+					<div>
+						<span class="span">地区：</span>
+						<div class="l td select">
+						<select name="">
+							<option value="1">省</option>
+						</select>
+						<select name="">
+							<option value="2">市</option>
+						</select>
+						<select name="">
+							<option value="3">镇</option>
+						</select>							
+						</div>
+					</div>
+					
+					<div>
+						<span class="span">价格：</span>
+						<input type="text" class="input-m margin_r" id="" value="" /> 
+						<label for="q" class="margin_r"><input type="radio" name="yd" id="q" value="" checked=""/> 元/m&sup2;天</label> 
+						<label for="w"><input type="radio" name="yd" id="w" value="" /> 元/m&sup2;月</label> 
+					</div>
+					
+					<div>
+						<span class="span">面积：</span>
+						<input type="text" id="" class="input-m margin_r" value="" />
+						<label for="">m&sup2;</label>
+					</div>
+				</div>
+			</div>
+			<!--基本信息end-->
+			<!--详细描述-->
+			<div class="background margin_t">
+				<div class="content">
+					<div class="title font-sm  border">
+						详情描述
+					</div>
+					<div>
+						<div class="content Essentialinformation">
+							<div>
+								<span class="span">具体位置：</span>
+								<input type="text" id="" value="" />							
+							</div>
+							<div>
+								<span class="span">信息标题：</span>
+								<input type="text" id="" value="" />							
+							</div>
+							<div>
+								<span class="span">详细说明：</span>
+								<textarea name="" rows="" cols="" placeholder="不少于10字····"></textarea>
+							</div>
+							<div>
+								<span class="span">上传图片：<br>(双击删除)&nbsp;&nbsp;&nbsp;</span>
+									<div class="l up-files">
+									<i class="up-img">
+										<input type="file" onchange="upImg(this)" name="" id="" value="" />
+									</i>
+									</div>
+							</div>			
+							<div>
+								<span class="span">标注位置：</span>
+								<a href="#" class="a-Geography ptc">点击添加</a>
+							</div>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+			<!--详细描述end-->
+			<!--联系信息-->
+			<div class="background margin_t">
+				<div class="content">
+					<div class="title font-sm  border">
+						详情描述
+					</div>
+				</div>
+				<div class="content Essentialinformation">	
+					<div>
+						<span class="span">联系人：</span>
+						<input type="text" id="" value="" />
+					</div>
+					<div>
+						<span class="span">联系电话：</span>
+						<input type="text" id="" value="" />
+					</div>
+					<a href="#" class="link_a ptc">提交</a>
+				</div>
+			</div>			
+			<!--联系信息-->
+			<!--有钱链接-->
+			<div class="margin_t content paddingTB" >	
+				<div class="content font-s ">
+					镇区直达
+					<div id='Direct' >
+						<a href="#">东城厂房出租</a>
+						<a href="#">南城厂房出租</a>
+						<a href="#">塘厦厂房出租</a>
+						<a href="#">长安厂房出租</a>
+						<a href="#">常平厂房出租</a>
+						<a href="#">企石厂房出租</a>	 	 				
+					</div>					
+				</div>
+			</div>
+			<!--有钱链接-->
+		</div>
+
+		
+		<!--底部菜单-->
+		<center id='bottom' class="font-sx" style="line-height: 1.5rem;color: #C7C7C7;background: #000;">(c) Copyright 2017 厂房帮 粤iCp备 17011034号 </center>
+		
+	</body>
+	<script src="../up/js/imgUp.js"></script> 
+	<script type="text/javascript">
+		$(function(){
+			var bodyH=$('body').height();//全部
+			var headH=$('#head').height();
+			var bH=$('#bottom').height();//底部高度
+			$('#con').height(bodyH-bH-headH)//内容高度 
+					
+		})
+
+
+
+
+
+
+
+
+
+		//上传图片
+		function upImg(obj)
+		{
+			var up=$('<i class="up-img"><input type="file" onchange="upImg(this)" name="" id="" value="" /></i>');			
+			var f=$(obj).parents('i');
+			if(obj.files[0].type!='image/jpeg' && obj.files[0].type!='image/png' )
+			{
+				alert('只能上传jpeg和png类型图片')
+			}else{
+				
+				var url= URL.createObjectURL(obj.files[0]);
+				var img=$('<img />');
+				img.prop('src',url);
+				f.append(img);
+				if($('.up-files').find('i').length<8)
+				{
+					
+					$('.up-files').append(up);	
+				}
+				
+			}
+			//删除
+			if(f.has('img'))
+			{
+				f.click(function(){
+					f.remove()
+					if($('.up-files').find('i').length==0)
+					{
+						$('.up-files').append(up);
+					}
+				})
+			} 	
+		}
+		//点击提交时候
+		 var imgArr=[];//全局变量
+		$('.up-files input[type=file]').each(function(){
+			imgArr.push(this.files[0])
+		})
+		
+		
+	</script>	
+</html>
+

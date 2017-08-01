@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link href="../up/css/common.css" type="text/css" rel="stylesheet"/>
+		<link href="../up/css/index.css" type="text/css" rel="stylesheet"/>		
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		
+		<style type="text/css">
+			.tab > div{display: none;}
+			.tab > div:nth-child(1){display: block;}
+			
+			.tab ul{width: 100%;}
+			.tab li{list-style: none;width: 100%;overflow: hidden;border-bottom: 1px solid #EFEFF4;}
+			.tab li >div{text-align: center;float: left;}
+			.tab li>div{font-size: .7rem;line-height: 1.5rem;}
+			.tab .md li:nth-child(1){background: #F5F5F5;} 
+			
+			.files  .Sample{margin:1rem auto;display: block;height: 6rem;}
+			#tab3 >div{margin: .7rem 0;overflow: hidden;}
+			#tab3 textarea{width: 9.8rem;padding: .2rem;}
+			
+			.imgfil input{opacity: 0;}
+		</style>
+	</head>
+	<body>
+		<div class="background " id="head">
+			<div class="content">
+				<nav>
+					<div class="logo">
+						<img src="../img/LOGO(1).png" /> 
+					</div>
+					<div>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a>
+					</div>
+					<div style="text-align: right;">
+						<a href=""><i class="iconfont i_big margin_r">&#xe619;</i></a> 
+						<a href=""><i class="iconfont i_big ">&#xe624;</i></a>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--内容区域-->	
+		<div id="con">
+			<div class="background ">
+				<div class="content">
+					<div class="title font-m border">
+						<div class="tabList" id='tabList1'>
+							<div class="border-bottom-ptc select" href='tab1'>身份认证</div>
+							<div class="select" href='tab2'>企业认证</div> 
+							<div class="select" href='tab3'>完善个人信息</div>   
+						</div> 
+					</div>
+					
+					<div class="tab paddingTB files ">
+					<div class="md" id='tab1'>
+						<div class="font-s">上传身份证（正面）：</div>
+						<i class="iconfont imgfil">
+							&#xe636;
+							<input type="file" name="" id="" value="" />
+						</i>
+						<div class="font-s">身份证正面示例：</div>
+						<img src="../img/idz.png" class="Sample"/> 
+						<!--这里是一个-->
+						<div class="font-s">上传身份证（反面）：</div>
+						<i class="iconfont imgfil">
+							&#xe636;
+							<input type="file" name="" id="" value="" />
+						</i>
+						<div class="font-s">身份证反面示例：</div>
+						<img src="../img/idf.png" class="Sample"/>	
+						
+						<a href="#" class="link_a ptc">提交</a>
+					</div>	
+					
+					
+					<div class="md" id='tab2'>
+						<div class="font-s">上传法人身份证（正面）：</div>
+						<i class="iconfont imgfil">
+							&#xe636;
+							<input type="file" name="" id="" value="" /> 
+						</i>
+						<div class="font-s">身份证正面示例：</div>
+						<img src="../img/idz.png" class="Sample"/>
+						<!--这里是一个-->
+						<div class="font-s">上传法人身份证（反面）：</div>
+						<i class="iconfont imgfil">
+							&#xe636;
+							<input type="file" name="" id="" value="" />
+						</i>
+						<div class="font-s">身份证反面示例：</div>
+						<img src="../img/idf.png" class="Sample"/>	
+						<!--这里是一个-->
+						<div class="font-s">上传营业执照：</div>
+						<i class="iconfont imgfil">
+							&#xe636;
+							<input type="file" name="" id="" value="" />
+						</i>
+						<div class="font-s">营业执照正面示例：</div>
+						<img src="../img/idqy.png" class="Sample"/>
+						<a href="#" class="link_a ptc">提交</a>
+					</div>	
+					
+					<div class="md" id='tab3'>
+						<div class="font-s" >
+						<span class="span " >上传头像：</span>
+						<i class="iconfont headImgfile" style="margin: initial; display: inline-block;">
+							&#xe636;
+							<input type="file" name="" id="" value="" />  
+						</i>								
+						</div>
+						<div><span class="span l">公司名称：</span><input type="text" class="l" id="" value="" /></div>
+						<div>
+							<span class="span l">性别：</span> 
+							<select name="">
+							<option value="">男</option>
+							<option value="">女</option>
+							</select>
+						</div>
+						<div>
+							<span class="span l">地区：</span>
+							<select name="">
+								<option value=""></option>
+							</select>
+						</div>
+						<div><span class="span l">姓名：</span><input type="text" class="l" id="" value="" /></div>
+						
+						<div>
+							<span class="l span">简介：</span>
+							<textarea name="" rows="6" cols="20" placeholder="不少于10字····"></textarea> 
+						</div>
+						<a href="#" class="link_a ptc">提交</a>
+					</div>						
+					</div>
+				</div>
+			</div>
+
+				
+			<!--有钱链接-->
+			<div class="margin_t content paddingTB" >	 
+				<div class="content font-s ">
+					镇区直达
+					<div id='Direct' >
+						<a href="#">东城厂房出租</a>
+						<a href="#">南城厂房出租</a>
+						<a href="#">塘厦厂房出租</a>
+						<a href="#">长安厂房出租</a>
+						<a href="#">常平厂房出租</a>
+						<a href="#">企石厂房出租</a>	 	 				
+					</div>					
+				</div>
+			</div>
+			<!--有钱链接-->
+		</div>
+
+		
+
+		<!--底部菜单-->
+		<center id='bottom' class="font-sx" style="line-height: 1.5rem;color: #C7C7C7;background: #000;">(c) Copyright 2017 厂房帮 粤iCp备 17011034号 </center>
+		
+	</body>
+	<script src="../up/js/imgUp.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		$(function(){
+			var bodyH=$('body').height();//全部
+			var headH=$('#head').height();
+			var bH=$('#bottom').height();//底部高度
+			$('#con').height(bodyH-bH-headH)//内容高度  
+			
+			/*头部选项卡*/
+			$('#tabList1 div').on('touchstart',function(){
+				$(this).addClass('border-bottom-ptc').siblings().removeClass('border-bottom-ptc')  
+			})			
+		})
+
+		/*选项卡*/
+		tabs('.tab')
+		function tabs(obj){
+		 	$('.select').on('touchstart',function(){
+		 		var tab=$(this).attr('href');
+		 		$(obj+'> div').each(function(){
+		 			if($(this).attr('id')==tab) 
+		 			{
+		 				$(this).show(); 
+		 			}else{
+		 				$(this).hide();
+		 			}
+		 		})
+		 	})	 
+		}
+
+
+		//设置最近发部各表单的长度
+		var w= $('.tab').width();
+		$('.tab li>div').width(w/4);
+		
+		$('input[type=file]').change(function(){
+			var urls =URL.createObjectURL(this.files[0]);
+			var img = $('<img src="" onclick="removeImg(this)"/>');
+			img.attr('src',urls);
+			$(this).parent().append(img);//添加图片
+		})
+		//删除图片
+		function removeImg(obj){
+			//$(obj).remove();
+			//$(obj).parent().val(''); 
+		}
+		
+
+
+
+
+	</script>	
+</html>

@@ -1,0 +1,15 @@
+Listofgoods：商品列标
+超出省略号 display:block;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+超出换行word-wrap:break-word; word-break:break-all;text-overflow:ellipsis;width: 630px;
+Mdisplay ：商品展示
+form  表单
+
+y_m_L 个人首页
+integral  积分
+rm企业选址
+rt悬赏任务
+f_lease厂房出租
+r_f 厂房求租
+p_i发布信息
+
+m_id 身份认证

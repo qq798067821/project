@@ -1,0 +1,4 @@
+.Modality > div{background: #fff;}
+.Modality li{width: 95% ;padding: .5rem 0;text-align: center;border-bottom: 1px solid #eee;margin: auto;font-size: .8rem;}
+.Modality li:last-child(1){border: none;}
+.select{border: none;padding: 0 }

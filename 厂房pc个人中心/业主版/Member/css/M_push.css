@@ -1,0 +1,6 @@
+	/*模态模态框*/
+	.m_push_mt{min-height: 100%;width: 100%;background: rgba(0,0,0,0.5);position: absolute;z-index: 20;display: none;}  
+	/*模态模态框表单*/
+	.m_push_mt_from{height: auto;width: 800px;margin: auto;background: #fff;padding-bottom: 20px;} 
+	/*模态框里的照片*/
+	.m_push_mt_img{width: 350px;height: 160px;margin-top: 10px;}

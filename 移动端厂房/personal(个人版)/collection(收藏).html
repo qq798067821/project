@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
+		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
+		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
+		<link href="../up/css/common.css" type="text/css" rel="stylesheet"/>
+		<link rel="stylesheet" type="text/css" href="../up/css/index.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/swiper-3.4.2.min.css"/>
+		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+		<script src="../js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script>	 
+	</head>
+	
+	<style type="text/css">
+			.releaselist{height: 3.5rem;overflow: hidden;margin-top: 1rem;}
+			.releaselist img{height: 100%;}
+			.releaselist>div{float: left;height: 100%;}
+			.releaselist>div:nth-child(1){width: 30%;border-right: 1px solid #E3E3E3;text-align: center;display: table-cell;}
+			.releaselist>div:nth-child(2){width: 70%;height: 100%;} 
+			.releaselist a{display: inline-block;padding: .2rem 1rem;font-size: .7rem;color: #191919;margin: 4%;
+			background: #FAFAFA;}
+			 
+			.nav-tab{position: relative;}
+			.nav-tab > div {font-size: .8rem;padding: .3rem .5rem;float: left;border-bottom: 1px solid #fff;cursor: pointer;}
+			.nav-tab {margin: .5rem auto;}
+			.nav-tab span,.nav-tab a{display: inline-block;position: absolute;border: 1px solid #C3C3C3;right: 0;font-size: .7rem;padding: .1rem .5rem;}
+			.nav-tab a{color: #191919;right: 3.5rem;}
+  			.more_a{margin-bottom: 3rem;} 
+  			
+  			#con .content{display: none;}
+  			#con .content:first-child{display: block;} 
+  			
+  			
+  			.Verticalcentering{padding: .6rem 0;display: block;}
+  			.Verticalcentering input{width: .8rem;}
+  			.img-list{border-bottom: 1px solid #E3E3E3;}
+  			.img-list>div{height: 5rem;}
+  			.img-list input[type=checkbox]{height: .8rem;width: .8rem;display: none;margin-right: .5rem;}
+  			.img-list-img{height: 4rem;width: 28%;margin-right: 2%;}  
+  			.img-list-img img{height: 100%;width: 100%;}
+  			.img-list .inline-blick{position: relative;}
+  			.img-list .img-circle{height: 1.8rem;position: absolute;left: 0;width: 1.8rem;}
+  			.img-list .img-list-text{vertical-align: top;width: 100%;}
+  			.img-list-text > *{padding-bottom: .1rem;vertical-align: -webkit-baseline-middle;overflow: hidden;}
+  			.img-list-text > *:last-child{padding: 0;}
+  			.img-list-text > div > *{vertical-align: super;}
+  			
+  			.nothing{font-size: .8rem;margin-top: 1rem;}
+  			/*全选*/
+  			.selectall{line-height: 2rem;border-bottom: 1px solid #E3E3E3;display: none;font-size: .8rem;}
+  			.selectall input[type=checkbox]{height: .8rem;width: .8rem;margin-right: .5rem;} 
+  			.selectall i{font-size: 1rem;}
+	</style> 
+	
+	<body>
+		<div class="background " id="head">    
+			<div class="content">
+				<nav>
+					<div class="logo">
+						<img src="../img/LOGO(1).png" /> 
+					</div>
+					<div>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a>   
+					</div>
+					<div style="text-align: right;">
+						<a href=""><i class="iconfont i_big margin_r">&#xe619;</i></a>  
+						<a href=""><i class="iconfont i_big ">&#xe624;</i></a> 
+					</div> 
+				</nav>
+			</div>
+		    <div class="swiper-container-title"> 
+		        <div class="swiper-wrapper">
+		            <a href="#" class="swiper-slide ptc White" data-hash="slide1">个人资料</a>
+		            <a href="#" class="swiper-slide" data-hash="slide2">发布信息</a>
+		            <a href="#" class="swiper-slide" data-hash="slide3">发布管理</a>
+		            <a href="#" class="swiper-slide" data-hash="slide4">个人资料</a>
+		            <a href="#" class="swiper-slide" data-hash="slide5">发布信息</a>  
+		            <a href="referralinformation(转介信息).html#slide6" class="swiper-slide" data-hash="slide6">发布管理</a>     
+		        </div>
+		    </div>			
+		</div>
+		<!--内容区域-->
+		<img src="../img/home_icon_zhiding.png" class="sTop"/>
+		<div class="background">
+		<div id="con">
+			<div class="content">
+				<div class="content title-border nav-tab"> 
+						<div class="border-bottom-ptc">需求</div>
+						<div>厂房</div> 
+						<div>仓库</div>
+						<div>土地</div>
+						<div>园区</div>
+						<span>编辑</span>  
+				</div> 				
+				<div class="tab">
+					<a href="#" data-href="#" class="img-list li"><div class="Verticalcentering"><input type="checkbox"><div class="inline-blick img-list-text"><div style="overflow: hidden;"><p class="text-x font-m l" style="width: 70%;">清溪新一楼标准厂房1600平出租,请联系</p><p class="font-s" style="width: 28%;float: right;text-align: right;">2017-01-01</p></div><div class="font-s margin_t"><span class="td">地区：东莞-清溪</span><span class="font-s">厂房出租</span></div></div></div></a>  
+					
+					<div class="selectall"><label for="all" class="all"><input type="checkbox" class="all margin_r" id="all"  />全选</label> <span><span class="del"><i class="iconfont">&#xe62c;</i>删除</span></div> 
+					<center class="nothing">暂无数据</center>
+					<a href="#" class="more_a">点击添加信息</a>  					
+				</div>
+			</div>
+			<!--厂房-->
+			<div class="content">
+				<div class="content title-border nav-tab"> 
+						<div>需求</div>
+						<div class="border-bottom-ptc">厂房</div> 
+						<div>仓库</div>
+						<div>土地</div>
+						<div>园区</div>
+						<span>编辑</span>  
+				</div> 			
+				<div class="tab">
+					<a href="#" data-href="#" class="img-list li"><div class="Verticalcentering"><input type="checkbox"><div class="inline-blick img-list-text"><div style="overflow: hidden;"><p class="text-x font-m l" style="width: 70%;">清溪新一楼标准厂房1600平出租,请联系</p><p class="font-s" style="width: 28%;float: right;text-align: right;">2017-01-01</p></div><div class="font-s margin_t"><span class="td">地区：东莞-清溪</span><span class="font-s">厂房出租</span></div></div></div></a>  
+					
+					<div class="selectall"><label for="all" class="all"><input type="checkbox" class="all margin_r" id="all"  />全选</label> <span><span class="del"><i class="iconfont">&#xe62c;</i>删除</span></div> 					
+					<center class="nothing">暂无数据</center>
+					<a href="#" class="more_a">点击添加信息</a>  					
+				</div>
+			</div>			
+			<!--仓库-->
+			<div class="content">
+				<div class="content title-border nav-tab"> 
+						<div>需求</div>
+						<div>厂房</div> 
+						<div class="border-bottom-ptc">仓库</div>
+						<div>土地</div>
+						<div>园区</div>
+						<span>编辑</span>  
+				</div> 
+				<div class="tab">
+					<a href="#" data-href="#" class="img-list li"><div class="Verticalcentering"><input type="checkbox"><div class="inline-blick img-list-text"><div style="overflow: hidden;"><p class="text-x font-m l" style="width: 70%;">清溪新一楼标准厂房1600平出租,请联系</p><p class="font-s" style="width: 28%;float: right;text-align: right;">2017-01-01</p></div><div class="font-s margin_t"><span class="td">地区：东莞-清溪</span><span class="font-s">厂房出租</span></div></div></div></a> 
+					
+					<div class="selectall"><label for="all" class="all"><input type="checkbox" class="margin_r" id="all"  />全选</label> <span><span class="del"><i class="iconfont">&#xe62c;</i>删除</span></div> 					
+					<center class="nothing">暂无数据</center>
+					<a href="#" class="more_a">点击添加信息</a>  					
+				</div>	 
+			</div>	
+			
+			<!--土地-->
+			<div class="content">
+				<div class="content title-border nav-tab"> 
+						<div>需求</div>
+						<div>厂房</div> 
+						<div>仓库</div>
+						<div class="border-bottom-ptc">土地</div>
+						<div>园区</div>
+						<span>编辑</span>  
+				</div> 
+				<div class="tab">
+					<a href="#" data-href="#" class="img-list li"><div class="Verticalcentering"><input type="checkbox"><div class="inline-blick img-list-text"><div style="overflow: hidden;"><p class="text-x font-m l" style="width: 70%;">清溪新一楼标准厂房1600平出租,请联系</p><p class="font-s" style="width: 28%;float: right;text-align: right;">2017-01-01</p></div><div class="font-s margin_t"><span class="td">地区：东莞-清溪</span><span class="font-s">厂房出租</span></div></div></div></a> 
+					
+					<div class="selectall"><label for="all" class="all"><input type="checkbox" class="margin_r" id="all"  />全选</label> <span><span class="del"><i class="iconfont">&#xe62c;</i>删除</span></div> 					
+					<center class="nothing">暂无数据</center>
+					<a href="#" class="more_a">点击添加信息</a>  					
+				</div>	 
+			</div>	
+			
+			<!--园区-->
+			<div class="content">
+				<div class="content title-border nav-tab"> 
+						<div>需求</div>
+						<div>厂房</div> 
+						<div>仓库</div>
+						<div>土地</div>
+						<div class="border-bottom-ptc">园区</div>
+						<span>编辑</span>  
+				</div> 
+				<div class="tab">
+					<a href="#" data-href="#" class="img-list li"><div class="Verticalcentering"><input type="checkbox"><div class="inline-blick img-list-text"><div style="overflow: hidden;"><p class="text-x font-m l" style="width: 70%;">清溪新一楼标准厂房1600平出租,请联系</p><p class="font-s" style="width: 28%;float: right;text-align: right;">2017-01-01</p></div><div class="font-s margin_t"><span class="td">地区：东莞-清溪</span><span class="font-s">厂房出租</span></div></div></div></a> 
+					
+					<div class="selectall"><label for="all" class="all"><input type="checkbox" class="margin_r" id="all"  />全选</label> <span><span class="del"><i class="iconfont">&#xe62c;</i>删除</span></div> 					
+					<center class="nothing">暂无数据</center>
+					<a href="#" class="more_a">点击添加信息</a>  					
+				</div>	 
+			</div>				
+			
+		</div>
+		</div>
+		<!--内容区域end-->
+
+
+		
+		<!--底部-->
+		<center id='bottom' class="font-sx" style="line-height: 1.5rem;color: #C7C7C7;background: #000;">(c) Copyright 2017 厂房帮 粤iCp备 17011034号 </center>
+		
+	</body>
+	<script type="text/javascript">
+		$(function(){
+		//头部导航
+			var swiper = new Swiper('.swiper-container-title', {
+			    pagination: '.swiper-pagination',
+			    slidesPerView: 3,
+			    paginationClickable: true,
+			    spaceBetween: 30, 
+			    freeMode: true,
+			    hashnav:true
+			});					
+			
+			var bodyH=$('body').height();//全部
+			var headH=$('#head').height();
+			var bH=$('#bottom').height();//底部高度
+			$('#con').height(bodyH-bH-headH)//内容高度  
+			
+			
+			$('#con > .content').find('.nav-tab div').on('click',function(){
+				 $('#con > .content').eq($(this).index()).show().siblings().hide(); 
+			}) 
+			//点击选中
+			$('.li').click(function(){
+				if($(this).parents('.content').find('.nav-tab span').hasClass('ptc')) 
+				{
+					var obj=$(this).find('input');
+					if(obj.prop('checked'))
+					{
+						obj.prop('checked',false) 
+					}else{
+						obj.prop('checked',true)
+					}					
+				}				
+			}) 
+			
+			//点击编辑
+			$('.nav-tab span').click(function(){
+				$(this).toggleClass('ptc White');
+				if($(this).parents('.content').find('.li').length==0)
+				{
+					return false;
+				}
+				
+				if($(this).hasClass('ptc'))
+				{
+					$(this).parents('.content').find('input').show()
+					$(this).parents('.content').find('.more_a').hide();
+					$(this).parents('.content').find('.selectall').show(); 
+				}else{
+					$(this).parents('.content').find('.li input').hide();
+					$(this).parents('.content').find('input').prop('checked',false);
+					$(this).parents('.content').find('.more_a').show();
+					$(this).parents('.content').find('.selectall').hide();
+				}
+			})
+			
+			//暂无数据显示，加载更多显示
+			nothing()
+			function nothing(){
+				var len =$('.content .img-list').length;
+				$('#con .content').each(function(){
+					if($(this).find('.img-list').length==0)
+					{
+						$(this).find('.nothing').show();	
+						$(this).find('.more_a').hide();
+					}else{
+						$(this).find('.nothing').hide();
+						$(this).find('.more_a').show();
+					}
+				})
+			}
+			
+			//全选
+			$('.all').click(function(){
+				var sel= $(this).parents('.content').find('.li input');
+				if(sel.prop('checked') || $(this).find('input').prop('checked'))
+				{
+					sel.prop('checked',false);
+					$(this).find('input').prop('checked',false)
+				}else{
+					sel.prop('checked',true) 
+					$(this).find('input').prop('checked',true)
+				}
+			})
+			
+			//删除
+			$('.del').click(function(){
+				$(this).parents('.content').find('input:checked').parents('.li').not('.selectall').remove();
+				if($(this).parents('.content').find('.li').length==0)
+				{
+					$(this).parents('.content').find('.selectall').hide(); 
+					nothing();
+				}
+			})
+ 
+			//点击加载更多，链接写到data-href里
+			$('.more_a').click(function(){
+				var len=$(this).parents('.content').find('.img-list').length;
+				var a=$(this).parents('.content').find('.img-list').eq(len-1);
+				var html=$('<a href="#" data-href="#" class="img-list li"><div class="Verticalcentering"><input type="checkbox"><div class="inline-blick img-list-text"><div style="overflow: hidden;"><p class="text-x font-m l" style="width: 70%;">清溪新一楼标准厂房1600平出租,请联系</p><p class="font-s" style="width: 28%;float: right;text-align: right;">2017-01-01</p></div><div class="font-s margin_t"><span class="td">地区：东莞-清溪</span><span class="font-s">厂房出租</span></div></div></div></a> ')
+				html.insertAfter(a); 
+			}) 
+			
+			
+
+			
+			$('#con').scroll(function(){
+				console.log($('#con').scrollTop())
+				if($('#con').scrollTop()>0){
+					$('.sTop').show(200)
+				}else{
+					$('.sTop').hide(200)
+				}
+			})
+			//点击置顶
+			$('.sTop').click(function(){
+				$('#con').scrollTop(0) ;
+				$(this).hide(200)
+			})			
+		})
+		
+	
+
+	function liSel(obj){
+		var keys=$(obj).parents('.content').find('span').hasClass('ptc'); 
+		if(keys) 
+		{
+			toggleCheck($(obj));
+		}else{
+			window.location.href=$(obj).attr('data-href');     
+		}
+	}
+	
+	function toggleCheck(obj){  
+		if(obj.find('input').prop('checked')==true) 
+		{
+			obj.find('input').prop('checked',false) 
+		}else{
+			obj.find('input').prop('checked',true) 
+		}
+	}   
+		
+	</script>	
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,48 @@
+.m_L{float: left;width: 225px;background: #fff;height: auto}
+.m_L .m_L_c{width: 205px;margin: 10px auto;}
+.m_L_c  a{display: block;line-height: 50px;text-indent: 2.5rem;position: relative;}  
+.m_L_c  a , .m_L_c  span {color: rgb(88,88,88);}
+.m_L_c  .m_sp {position: absolute;right: 10px;font-size: 20px;color: #fff;}/*dxxx*/ 
+.m_atv{background:#00AE66;color: #fff !important;} 
+.m_L_c a:hover{background: #00AE66;color: #fff;}
+.m_L_c a:hover span{opacity: 1;}
+
+
+/*右边*/
+.y_m_r{width: 766px;height: auto;float: right;background:#fff;min-height: 581px;}    
+.m_r_c{width: 750px;margin:10px auto;height: auto;}   
+
+/*个人信息*/
+.pi{border-bottom: 1px solid rgb(229,229,229);padding: 10px 0;overflow: hidden;position: relative;}
+/*照片*/
+.pt{float: left;padding: 0 15px;}
+.pt img{border-radius: 100px;width: 100px;height: 100px;padding: 2px;border: 1px solid rgb(229,229,229);} 
+/*账户信息*/
+.ac{float: right;}
+.m_tr{width: 580px;margin: 12px 0;}
+.m_td{width: 50%;float: left;overflow: hidden;} 
+.m_t{text-indent: 1rem;}
+.m_t p{margin-right: 20px;}
+.m_tit{position: relative;height: 50px;border-bottom: 1px solid rgb(229,229,229);}
+.m_tit > div{position: absolute;}
+.m_tit p{width:100px;line-height: 49px;text-align: center;font-size: 16px;cursor: pointer;}
+
+/*列表*/
+.m_f{border: 1px solid rgb(229,229,229);margin: 10px 0;} 
+
+.m_f>div:nth-child(1){background: rgb(246,246,246);color: rgb(103,103,103);}
+.m_f_tr{overflow: hidden;} 
+.m_f_td{float: left;margin: 12px 0;width: 25%;text-align: center;position: relative;}
+.m_f_td a{display: block;margin: auto;width: 95%;white-space:nowrap; overflow:hidden; text-overflow:ellipsis;color: #000}  
+
+
+/*评论*/
+.m_com{margin-top: 0;}
+.m_com .pt img{height:70px ;width: 70px ;border-radius: 70px;}     
+.m_com_i{float: left;}
+.m_com_i p{line-height: 25px;}
+.m_com_i .huanH{word-wrap:break-word; word-break:break-all;text-overflow:ellipsis;width: 630px;}
+.m_com center:hover{color: red;}
+
+/*勾选框*/
+.check{position: absolute;left: 10px;top: 4px;}

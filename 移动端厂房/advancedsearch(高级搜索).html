@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>	
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+		<!--地图-->
+		<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=nHcGETMLia5TsiR9vWPLdTb61LEeTT76"></script>
+		<!--私有-->
+		<style type="text/css">
+			.childer-min{max-width: 76.5%;float: left;} 
+			.childer-max{max-width: 85.5%;float: left;}
+			.table span,.tr span{line-height: 1.5rem;position: relative;overflow: initial;font-size: .7rem}
+			.table .childer-min span,.childer-max span{float: left;margin-right: .5rem;line-height: 1.5rem;} 
+			#screen span,#screen i{margin-right: 1.5rem;line-height: 1.2rem;padding: 0 0.2rem;margin-bottom: .5rem;}
+			#screen > span:nth-child(1){margin-right: 0;}
+			#screen .childer-max span:nth-child(n+1){display: block;border: 1px solid #666;}  
+			#screen .childer-max span:after{content: 'X';color: #fff ;top: -1px;width: 1rem;height: 100%;position: absolute;background:#999;border: 1px solid #666;text-align: center;}
+			#screen i{font-size: .6rem;float: left;line-height: 1.5rem;}  
+			#delAll{display: none;}
+		</style> 		
+	</head>
+	<body> 
+		<div class="background " id="head"> 
+			<div class="content">
+				<nav>
+				<div class="logo">
+					<img src="img/LOGO(1).png"/>
+				</div>
+				<div><a href="#" class="font ">东莞<span class="font-s">[选择城市]</span></a></div> 
+				<div style="text-align: right;">
+					<i class="iconfont i_big margin_r">&#xe619;</i>
+					<i class="iconfont i_big ">&#xe624;</i> 
+				</div> 	
+				</nav>  
+			</div>
+			<div class="ptc">
+				<div class="content headList"> 
+					<span class="font-s">首页>搜索</span>
+				</div>					
+			</div>			
+		</div>
+		
+		
+		<!--滚动区域-->
+		<div class="swiper-container-vertical">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+				<!--详情标题-->
+				<div class="background">
+					<div class="content">				
+						<div class="heading border margin_t"> 
+							<div class="search"><input type="text" /><button type="button" class="font-sm"><i class="iconfont i_big ">&#xe624;</i>  搜索</button></div>
+						</div>
+					<!--详情参数-->
+					<div class="content font-m table" id='condition'>
+						<ul>
+							<li class="activ">
+								<div class="tr">
+								<span class="l">热门城市：</span>
+								<div class="l childer-min">
+									<span>东莞</span>
+									<span>中山</span>
+									<span>佛山</span>
+									<span>广州</span>
+									<span>深圳</span>
+									<span>上海</span>
+									<span>深圳</span>
+									<span>上海</span>
+									<span>深圳</span>
+									<span>上海</span>
+								</div>
+								</div>							
+							</li>
+							<li>
+								<div class="tr">
+								<span class="l">区域：</span>
+								<div class="l childer-max">
+									<span>不限</span>
+									<span>莞城</span>
+									<span>南城</span>
+									<span>东城</span>
+									<span>万江</span>
+									<span>虎门</span>
+									<span>厚街</span>
+									<span>沙田</span>
+									<span>洪海</span>
+									<span>麻涌</span>
+									<span>中堂</span>
+									<span>高步</span>
+									<span>更多</span>								
+								</div>
+								</div>									
+							</li>
+							<li>
+								<div class="tr">
+								<span class="l">面积：</span>
+								<div class="l childer-max">
+									<span>不限</span>
+									<span>0.5km&sup2;</span>
+									<span>0.5km&sup2;~2km&sup2;</span>
+									<span>2km&sup2;~3.5km&sup2;</span>
+									<span>3.5km&sup2;~5km&sup2;</span>
+									<span>5km&sup2;~6.5km&sup2;</span>						
+								</div>
+								</div>	
+							</li>
+							<li>
+								<div class="tr">
+								<span class="l">结构：</span>
+								<div class="l childer-max">
+									<span>不限</span>
+									<span>标准厂房</span>
+									<span>钢构厂房</span>
+									<span>铁皮厂房</span>
+									<span>其他</span>					
+								</div>
+								</div>								
+							</li>
+							<li>
+								<div class="tr">
+								<span class="l">类型：</span>
+								<div class="l childer-max">
+									<span>不限</span>
+									<span>厂房</span>
+									<span>仓库</span>
+									<span>土地</span>				
+								</div>
+								</div>								
+							</li>								
+						</ul>
+						<center class="font_ptc">查看更多+</center>
+					</div>
+					
+					<div class="tr margin_t" id="screen">
+					<span class="l">筛选：</span>
+					<div class="l childer-max " id='conditionscreen'>
+						<span class="default">不限</span>
+						<i class="iconfont" id='delAll'>&#xe62c;清除条件</i>
+					</div>
+					</div>				
+					</div>	
+				</div>	
+				<!--详情参数-->	
+
+				<!--猜你喜欢-->
+				<div class="background margin_t">
+					<div class="content">
+						<div class="title font-m border ptc White"> 
+							搜索信息
+						</div>					
+						<div class="margin_t" id='details'>
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText">   
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>								
+						<div class="clear"></div>	
+						</div>
+						<a href="#" class="more_a margin_t">进入推荐厂房专区</a>
+					</div> 
+				</div>	
+				<!--猜你喜欢end-->
+				<!--看了该厂房还看了-->
+				<div class="background margin_t">
+					<div class="content">
+						<div class="title font-m border">
+							看了该厂房的用户还看了
+						</div>					
+						<div class="margin_t" id='details'>
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>	
+							<a href="https://hao.360.cn/?s0001" class="detailsImgText"> 
+								<div>
+									<img src="img/timg.jpg"/>
+								</div>
+								<img src="img/lease.png" class="imgDiv_r"/>	
+								<p>惠州花园的洋人厂，快来快来啊啊啊</p>
+								<p><span class="l">面积：</span><span class="red l">9600m&sup2;</span> <span class="r">惠州</span></p>
+							</a>								
+						<div class="clear"></div>	
+						</div>
+					</div> 
+				<!--文字资讯-->
+				<div class="newList content">
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>								
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>
+					<a href="https://hao.360.cn/?s0001"> 
+						<span>[塘厦]</span>厂房求租，我有很多很房子啊,快来租我的啊
+					</a>							
+				</div>					
+				<!--文字资讯-->					
+				</div>	
+				<!--看了该厂房还看了end-->
+
+				<!--有钱链接-->
+			<div class="margin_t" >	
+				<div class="content font-s ">
+					镇区直达
+					<div id='Direct' >
+						<a href="#">东城厂房出租</a>
+						<a href="#">南城厂房出租</a>
+						<a href="#">塘厦厂房出租</a>
+						<a href="#">长安厂房出租</a>
+						<a href="#">常平厂房出租</a>
+						<a href="#">企石厂房出租</a>	 	 				
+					</div>					
+				</div>
+			</div>
+			<div class="margin_t" >						
+					<center class="font-s" style="color: #C7C7C7;background: #eee;">(c) Copyright 2017 厂房帮  粤iCp备  17011034号 </center>
+			</div>	
+			<!--友情链接-->
+				<div class="swiper-scrollbar"></div>
+				</div>	
+			</div>	
+			</div><!--滚动区域end-->
+		</div><!--滚动区域end-->
+		<!--底部菜单-->
+		<div class="background bottom">   
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe603;</i>
+					<div>首页</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe602;</i>
+					<div>需求信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe68d;</i> 
+					<div>发布需求</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe63e;</i>
+					<div>出租信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe62a;</i>
+					<div>个人中心</div>
+				</div>
+			</a>				
+		</div>		
+	</body>
+<script src="js/Adaptation.js" type="text/javascript" charset="utf-8"></script>	
+<script type="text/javascript">
+$(function(){
+var headHeight=$('#head').height();
+var windowHeight=$('body').height()
+$('.Modality').height(windowHeight-headHeight)/*模态框高度*/ 
+
+
+
+/*头部选项卡*/
+$('#tabList1 div').on('touchstart',function(){
+	$(this).addClass('border-bottom-ptc').siblings().removeClass('border-bottom-ptc') 
+})
+
+
+/*点击放大图片*/
+imgShow()
+function imgShow()
+{
+	$('#tab2 img').on('touchstart',function(){
+		$('.Modality').fadeIn(500).find('img').attr('src',$(this).attr('src')); 
+		$('.Modality img').css({'margin-top':($('.Modality').height()-$(this).height())/2});
+		$('.Modality').css({'display':'table-cell'})  
+	})
+	$('.Modality').on('touchstart',function(){
+		$(this).fadeOut(500) 
+	})
+}
+
+
+//点击条件       添加到筛选条件里
+preventtouch('#condition ul li span',function(obj){
+	obj.addClass('font_ptc').siblings().removeClass('font_ptc');
+	var span = $('<span link='+obj.parents('li').index()+'>'+obj.text()+'</span>'); 
+	$('#conditionscreen span').each(function(){
+		if($(this).hasClass('default'))
+		{
+			$(this).remove();
+		} 
+		if($(this).attr('link')==obj.parents('li').index()) 
+		{
+			$(this).remove();
+		}
+	})
+	if($('#conditionscreen').find('span').length>0) 
+	{
+		console.log($('#conditionscreen').find('span').length)  
+		$('#delAll').show();
+	} 
+	$('#conditionscreen').find('i').before(span);
+	//筛选条件
+	preventtouch(span,function(obj){
+		obj.remove();	
+	}) 	
+})
+
+/*收缩*/
+preventtouch('.table center',function(obj){
+			obj.parent().find('li:gt(0)').fadeToggle(300);
+			if(obj.html()=='查看更多+') 
+			{
+				obj.html("收回-")  
+			}else{
+				obj.html("查看更多+")  
+			}					
+})
+
+
+
+//清空所以条件
+preventtouch('#delAll',function(obj){
+	obj.parent().find('span').remove();
+	obj.hide();
+	var span =$('<span class="default">不限</span>');
+	$('#conditionscreen').append(span) ;
+	$('#condition span').removeClass('font_ptc');
+})
+
+
+/*筛选只剩一个时候全部删除*/
+$('#conditionscreen').on('touchend',function(){
+	//alert()
+	console.log($('#conditionscreen').find('span').length); 
+	if($('#conditionscreen').find('span').length==0)
+	{
+		console.log($('#conditionscreen').find('span').length)
+		$('#delAll').hide(); 
+		var span =$('<span class="default">不限</span>');
+		$('#conditionscreen').append(span);
+		$('#condition span').removeClass('font_ptc');
+	}	 	
+})
+
+
+
+})
+
+</script>	
+</html>
+
