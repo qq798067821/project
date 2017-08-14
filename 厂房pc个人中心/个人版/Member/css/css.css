@@ -88,3 +88,6 @@ label{line-height: 30px;}
 .ts{display: none;}  
 .lod{height: 30px;display: none;}  
 #mt{width: 100%;background: rgba(0,0,0,0);position:absolute;z-index: 20;}   /*模态*/   
+
+/*自定义标签*/
+.custom-a{padding: 5px 15px;background: #E6E6E6;float: left;cursor: pointer;margin-right: 10px;}

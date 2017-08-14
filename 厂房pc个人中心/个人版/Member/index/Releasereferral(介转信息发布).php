@@ -17,8 +17,7 @@
 			<div class="Menber alls"> 
 				<?php include '../y_M_L.php' ?>
 				<?php include '../r_referral(转介发布).php' ?>	   
-				<div class=" clear"></div><!--清除浮动-->   
-				      
+				<div class=" clear"></div><!--清除浮动-->         
 			</div>   
 		</div>
 		<?php include '../../y_foot/y_foot.php' ?> 

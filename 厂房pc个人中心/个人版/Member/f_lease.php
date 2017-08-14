@@ -29,7 +29,7 @@
 		<div class="tr">
 			<div class="tda">
 				<span class="tsp">类别：</span>
-				<label for="f" class="mar"><input type="radio" name="x" id="f" value="" checked="checked"/>厂房出租</label>
+				<label for="f" class="mar"><input type="radio" name="x" id="f" value="" checked="checked" placeholder="厂房出租"/>厂房出租</label>
 				<label for="t"><input type="radio" name="x" id="t" value="" />厂房出租</label>
 			</div>
 		</div>
@@ -37,7 +37,7 @@
 		<div class="tr">
 			<div class="tda">
 				<span class='tsp' >价格：</span>
-				<input type="text" id="price" value="" class="inptext" />
+				<input type="text" id="price" placeholder="价格" value="" class="inptext" />
 				<select name="" class="selector_s">
 					<option value="">元/平方</option> 
 				</select>
@@ -254,10 +254,6 @@
 				<div  class="f_l_t">
 					联系信息
 				</div> 
-				
-		
-
-		
 		<div class="tr">
 			<div class="tda">
 				<span class="tsp">联系人：</span>
@@ -274,14 +270,29 @@
 		</div>			
 								
 		</div><!--建筑参数-->
-			
-		<div class="tr">
-			<div class="tda">
-				<span class="tsp">&nbsp;</span>
-				<a href="#" class="button_sm themeBackground fff l " id="tj" >确认提交</a> 
-				<img src="../../../img/lod.gif" class="lod"/>	 
-			</div>
-		</div>		
+		
+		
+		
+		<div class="pi born">
+				<div  class="f_l_t">
+					选择标签
+				</div>
+				<div class="tr"> 
+					<span class="tsp">&nbsp;</span>
+					<div class="font_lh">* 字符不能超过5个字，如果为“自定义”等于没添加标签</div>
+				</div>
+				<div class="tr custom-a-list">
+					<span class="tsp">&nbsp;</span> 
+					<div class="custom-a" onclick="foutin(this)" >自定义</div>				
+				</div> 			
+				<div class="tr">
+					<div class="tda">
+						<span class="tsp">&nbsp;</span>
+						<a href="#" class="button_sm themeBackground fff l " id="tj" >确认提交</a> 
+						<img src="../../../img/lod.gif" class="lod"/>	 
+					</div>
+				</div>	
+		</div>	
 	</div>
 
 </div>
@@ -378,5 +389,41 @@
 				//ajax提交在里面写
 			}
 		})
-	})	
+		
+		
+	
+
+	})
+	
+	
+	
+	
+	
+	//自定义标签
+	function foutin(obj){
+		$(obj).replaceWith('<input type="text" id="custom" value="" class="custom-a"  onblur="foutout(this)" onkeydown="kd(this)"/>');
+		$('#custom').focus()
+	}
+	
+	
+	function foutout(obj){
+		var html=$(obj).val();
+		html=$.trim(html);
+	    if(html!="" && html.length<=5 && html.length!=0)
+	    {
+	    	if($('.custom-a-list').find('.custom-a').length<=2)
+	    	{
+				var div=$('<div class="custom-a" onclick="foutin(this)" >自定义</div>');
+				$('.custom-a-list').append(div)		    		
+	    	}		
+	    }else{
+	    	html='自定义'
+	    }
+		$(obj).replaceWith('<div class="custom-a" onclick="foutin(this)" >'+html+'</div>');	
+	}
+	//点击提交时候获取
+	var costomArry=[];
+	$('.custom-a-list .custom-a').each(function(){
+	  	costomArry.push($(this).text());
+	})		
 </script>

@@ -430,9 +430,7 @@ function Mh(){
 }
 
 
-$(window).resize(function(){
-	Mh()
-})
+
 $('.M2').on('touchmove',function(){
 	Mh()
 })
@@ -444,8 +442,7 @@ $('#tabList1 div').on('touchstart',function(){
 
 /*点击放大图片*/
 preventtouch('#tab2 img',function(obj){
-	$('.M1').fadeIn(200).find('img').attr('src',obj.attr('src')); 
-	
+	$('.M1').fadeIn(200).find('img').attr('src',obj.attr('src')); 	
 	$('.M1 img').css({'margin-top':($('.M1').height()-obj.height())/2});
 	$('.M1').css({'display':'table-cell'})  	 
 })
@@ -525,8 +522,6 @@ $('.jubao-xz > div').click(function(){
 $('.M2 li').click(function(){
 	$(this).addClass('font_ptc').siblings().removeClass('font_ptc')
 })
-
-
 })
 
 

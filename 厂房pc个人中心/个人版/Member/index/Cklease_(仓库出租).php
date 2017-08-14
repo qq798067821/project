@@ -11,6 +11,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/f_lease.css"/> 
 	<link rel="stylesheet" type="text/css" href="../css/p_i.css"/> 
 	<script src="../../../js/jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+	<style type="text/css">
+		select{height:22px; line-height:28px; padding:2px 0}
+	</style>
 	<body>
 		<div id="mt"></div>
 		<?php include '../../y_head/y_head.php' ?>

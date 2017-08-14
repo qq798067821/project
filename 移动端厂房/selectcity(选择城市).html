@@ -9,30 +9,16 @@
     <meta content="email=no" name="format-detection">
     <link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>
     <link rel="stylesheet" type="text/css" href="css/css.css"/>
-    <link rel="stylesheet" href="css/LArea.css">
+    <link rel="stylesheet" type="text/css" href="css/demo.css"/>
+    <script src="js/picker.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/city.js" type="text/javascript" charset="utf-8"></script>
 	<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
     <title></title>
     <style type="text/css">
-    input {
-        width: 85%;
-        height: 2rem;
-        border: 1px solid #eee;
-        border-radius: 5px;
-        margin: 1rem auto;
-        font-size: .7rem;
-        color: #555;
-        display: block;
-        text-align: center;
-    }
+
     
-    h1 {
-        background-color: #b72f20;
-        color: #fff;
-        font-size: .7rem !important;
-        text-align: center;
-    }
-    
-    #tj{width: 85%;}
+    #tj{width: 85%;margin: auto;line-height: 1.5rem;text-align: center;}
+    #sel_city{height: 100%;}
     </style>
     
 </head>
@@ -56,59 +42,127 @@
 					<span class="font-sx">首页>出租信息>出租详情</span>
 				</div>					
 			</div>			
-		</div>	
+		</div>
+		<div>
+    <div class="row main">
+            <div class="row">         
+                    <a href="#" class="btn btn-info btn-lg active" role="button" id="sel_city">点击选取省市区县</a>
+            </div>
+    </div>
+    	<div id="tj" class="ptc White font-m">确定</div>
+		</div>
     <div>
-        <div class="content-block"> 
-            <input id="demo1" type="text" readonly="" placeholder="城市选择特效"  value="广东省-深圳市-南山区"/>
-            <input id="value1" type="hidden" value="20,234,504"/>
-            
-        </div>
-        <a href="#" class="link_a ptc" id="tj">确定</a>
-<!--         <div class="content-block">
-            <input id="demo2" type="text" readonly="" placeholder="城市选择特效" />
-            <input id="value2" type="hidden" />
-    	 </div>-->
-    <script src="js/LAreaData1.js"></script>
-    <script src="js/LAreaData2.js"></script> 
-    <script src="js/LArea.js"></script>
+
     <script type="text/javascript">
-   $(function() {
-	setRem(); /*请不用管*/
-	window.addEventListener("orientationchange", setRem);
-	window.addEventListener("resize", setRem);
-
-	function setRem() {
-		var html = document.querySelector("html");
-		var width = html.getBoundingClientRect().width;
-		html.style.fontSize = width / 20 + "px"; 
-	}
-	var windowHeight = $(window).height();
-	var headHeight = $('#head').height();
-	$('.scroll-body').height(windowHeight - headHeight);  
-	})
-
-var area1 = new LArea();
-area1.init({'trigger': '#demo1', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
-	    'valueTo': '#value1', //选择完毕后id属性输出到该位置
-	    'keys': {
-	        id: 'id',
-	        name: 'name'
-	    }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
-	    'type': 1, //数据源类型
-	    'data': LAreaData //数据源
-	});
-	area1.value=[1,15,3];//控制初始位置，注意：该方法并不会影响到input的value 
-	var area2 = new LArea();
-	area2.init({
-	    'trigger': '#demo2',  
-	    'valueTo': '#value2',
-	    'keys': {
-	        id: 'value',
-	        name: 'text'
-	    },
-	    'type': 1,
-	    'data': [provs_data+'-'+citys_data+'-'+dists_data]   
-	});
+		var nameEl = document.getElementById('sel_city');
+		
+		var first = []; /* 省，直辖市 */
+		var second = []; /* 市 */
+		var third = []; /* 镇 */
+		
+		var selectedIndex = [0, 0, 0]; /* 默认选中的地区 */
+		
+		var checked = [0, 0, 0]; /* 已选选项 */
+		
+		function creatList(obj, list){
+		  obj.forEach(function(item, index, arr){
+		  var temp = new Object();
+		  temp.text = item.name;
+		  temp.value = index;
+		  list.push(temp);
+		  })
+		}
+		
+		creatList(city, first);
+		
+		if (city[selectedIndex[0]].hasOwnProperty('sub')) {
+		  creatList(city[selectedIndex[0]].sub, second);
+		} else {
+		  second = [{text: '', value: 0}];
+		}
+		
+		if (city[selectedIndex[0]].sub[selectedIndex[1]].hasOwnProperty('sub')) {
+		  creatList(city[selectedIndex[0]].sub[selectedIndex[1]].sub, third);
+		} else {
+		  third = [{text: '', value: 0}];
+		}
+		
+		var picker = new Picker({
+		    data: [first, second, third],
+		  selectedIndex: selectedIndex,
+		    title: '地址选择'
+		});
+		
+		picker.on('picker.select', function (selectedVal, selectedIndex) {
+		  var text1 = first[selectedIndex[0]].text;
+		  var text2 = second[selectedIndex[1]].text;
+		  var text3 = third[selectedIndex[2]] ? third[selectedIndex[2]].text : '';
+		
+		    nameEl.innerText = text1 + ' ' + text2 + ' ' + text3;
+		});
+		
+		picker.on('picker.change', function (index, selectedIndex) {
+		  if (index === 0){
+		    firstChange();
+		  } else if (index === 1) {
+		    secondChange();
+		  }
+		
+		  function firstChange() {
+		    second = [];
+		    third = [];
+		    checked[0] = selectedIndex;
+		    var firstCity = city[selectedIndex];
+		    if (firstCity.hasOwnProperty('sub')) {
+		      creatList(firstCity.sub, second);
+		
+		      var secondCity = city[selectedIndex].sub[0]
+		      if (secondCity.hasOwnProperty('sub')) {
+		        creatList(secondCity.sub, third);
+		      } else {
+		        third = [{text: '', value: 0}];
+		        checked[2] = 0;
+		      }
+		    } else {
+		      second = [{text: '', value: 0}];
+		      third = [{text: '', value: 0}];
+		      checked[1] = 0;
+		      checked[2] = 0;
+		    }
+		
+		    picker.refillColumn(1, second);
+		    picker.refillColumn(2, third);
+		    picker.scrollColumn(1, 0)
+		    picker.scrollColumn(2, 0)
+		  }
+		
+		  function secondChange() {
+		    third = [];
+		    checked[1] = selectedIndex;
+		    var first_index = checked[0];
+		    if (city[first_index].sub[selectedIndex].hasOwnProperty('sub')) {
+		      var secondCity = city[first_index].sub[selectedIndex];
+		      creatList(secondCity.sub, third);
+		      picker.refillColumn(2, third);
+		      picker.scrollColumn(2, 0)
+		    } else {
+		      third = [{text: '', value: 0}];
+		      checked[2] = 0;
+		      picker.refillColumn(2, third);
+		      picker.scrollColumn(2, 0)
+		    }
+		  }
+		
+		});
+		
+		picker.on('picker.valuechange', function (selectedVal, selectedIndex) {
+		  console.log(selectedVal);
+		  console.log(selectedIndex);
+		});
+		
+		nameEl.addEventListener('click', function () {
+		    picker.show();
+		});
     </script>
 </body>
 

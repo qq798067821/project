@@ -37,7 +37,7 @@
 		<div class="tr">
 			<div class="tda">
 				<span class='tsp' >价格：</span>
-				<input type="text" id="price" value="" class="inptext" />
+				<input type="text" id="price" value="" placeholder="价格" class="inptext" />
 				<select name="" class="selector_s">
 					<option value="">元/平方</option> 
 				</select>
@@ -67,7 +67,7 @@
 			</div>
 			<div class="td">
 				<span class="tsp">办公面积：</span>
-				<input type="text" id="" value="" class="inptext"/>
+				<input type="text" id="" value=""  class="inptext"/>
 				<p class="t_p">m<sup>2</sup></p>
 			</div>
 		</div>		
@@ -76,7 +76,7 @@
 			<div class="td">
 				<span class="tsp">独院：</span>
 				<label for="y" class="mar"><input type="radio" name="y" id="y" value="" checked="checked"/>有</label>
-				<label for="w"><input type="radio" name="y" id="w" value="" />无</label>
+				<label for="w"><input type="radio" name="y" id="w" value=""  />无</label>
 			</div>
 			<div class="td">
 				<span class="tsp">宿舍面积：</span>

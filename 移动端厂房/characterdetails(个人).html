@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/swiper-3.4.2.jquery.min.js" type="text/javascript" charset="utf-8"></script> 
+		<link rel="stylesheet" type="text/css" href="fonts/iconfont.css"/>	
+		<link rel="stylesheet" type="text/css" href="css/swiper-3.4.2.min.css"/>
+		<link rel="stylesheet" type="text/css" href="css/css.css"/>
+
+		<!--私有-->
+		<style type="text/css">
+			#tabs{padding: .5rem 0;font-size: .8rem;}
+			#tabs>div:nth-child(2) img{width: 100%;padding: .2rem 0;}
+			#tabs>div{display: none;}
+			#tabs>div:nth-child(1){display: block;}   
+		</style>		
+	</head>
+	<body> 
+		<div class="background " id="head"> 
+			<div class="content">
+				<nav>
+				<div class="logo">
+					<img src="img/LOGO(1).png"/>
+				</div>
+				<div><a href="#" class="font ">东莞<span class="font-s">[选择城市]</span></a></div> 
+				<div style="text-align: right;">
+					<i class="iconfont i_big margin_r">&#xe619;</i>
+					<i class="iconfont i_big ">&#xe624;</i> 
+				</div> 	
+				</nav>  
+			</div>
+			<div class="ptc">
+				<div class="content headList"> 
+					<span class="font-s">首页 > 经纪 > 经纪人</span>
+				</div>					
+			</div>			
+		</div>
+		
+		
+		<!--滚动区域-->
+		<div class="swiper-container-vertical">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+				<!--详情标题-->
+				<div class="background">
+					<div class="content">
+						<!--经纪人资料-->
+						<div class="img-head">
+							<div class="l">
+								<img src="img/1.jpg" class="head-img"/>
+								<p class="margin_t"><img src="img/jingji_icon_renzheng_se.png" class="img-s"/>已认证</p>
+								<!--未认证-->
+								<!--<p><img src="img/jingji_icon_renzheng_de.png" class="img-s"/>已认证</p>-->
+							</div>
+							<div class="r">
+								<p class="font-m">张志明</p> 
+								<div>大朗：中原地产</div>
+								<div>等级：<span class="gold">V9</span></div>
+								<div>评价：<img src="img/xiangqing_icon_xiaoxing.png" /></div>
+							</div>
+						</div>
+						
+					</div>	
+					<div class="list">
+						<div>
+							<center>1年</center>
+							<center>进驻时间</center>
+						</div>
+						<div>
+							<center>200</center>
+							<center>浏览量</center>
+						</div>
+						<div>
+							<center>120</center>
+							<center>发布量</center>
+						</div>
+						<div>
+							<center>50</center>
+							<center>评价数</center>
+						</div>						
+					</div>
+				</div>
+
+
+				<!--详细描述-->
+
+				<div class="background margin_t border">
+					<div class="content">
+					<div class="title font-m border">
+						<!--选项卡-->
+						<div class="tabList" id='tabList1'>
+							<div class="border-bottom-ptc select" href='tab1'>厂房</div>
+							<div class="select" href='tab2'>仓库</div> 
+							<div class="select" href='tab3'>土地</div> 
+						</div> 
+						<!--选项卡end-->
+						
+						<div  id='tabs'> 
+							<!--厂房-->
+							<div class="md" id='tab1'>
+								<div class="a-list">
+									<a href="#" class="imgTextList">
+										<div class="imgTextList_img">
+											<img src="img/timg.jpg" />
+										</div>
+										<div class="text">
+											<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+											<div class="font-sx Specialline">
+												<span>地区：东莞-横沥  </span><span class="r red">价格：14元/m&sup2</span>
+											</div>
+											<div class="font-sx Specialline">
+												<span>厂房面积：1200m&sup2;</span>												
+											</div>
+										</div>
+									</a>									
+								</div>
+
+								<center class="nothing">暂无数据</center>
+								<a href="#" class="more_a margin_t">进入推荐厂房专区</a>
+							</div>	
+							<!--厂房-->
+							<!--仓库-->
+							<div class="md" id='tab2'>
+								<!--没有数据的-->
+								<div class="a-list"></div>
+								<center class="nothing">暂无数据</center>
+								<a href="#" class="more_a margin_t">进入推荐厂房专区</a>								
+							</div> 
+							<!--土地-->
+							<div class="md" id='tab3'>
+								<div class="a-list">
+									<a href="#" class="imgTextList">
+										<div class="imgTextList_img">
+											<img src="img/timg.jpg" />
+										</div>
+										<div class="text">
+											<p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p>
+											<div class="font-sx Specialline">
+												<span>地区：东莞-横沥  </span><span class="r red">价格：14元/m&sup2</span>
+											</div>
+											<div class="font-sx Specialline">
+												<span>厂房面积：1200m&sup2;</span>												
+											</div>
+										</div>
+									</a>									
+								</div>
+
+								<center class="nothing">暂无数据</center>
+								<a href="#" class="more_a margin_t">进入推荐厂房专区</a>		 						
+							</div> 
+						</div>	
+					</div>							
+					</div>		
+				</div>				
+				<!--详细描述-->
+
+				<!--有钱链接-->
+			<div class="margin_t" >	
+				<div class="content font-s ">
+					镇区直达
+					<div id='Direct' >
+						<a href="#">东城厂房出租</a>
+						<a href="#">南城厂房出租</a>
+						<a href="#">塘厦厂房出租</a>
+						<a href="#">长安厂房出租</a>
+						<a href="#">常平厂房出租</a>
+						<a href="#">企石厂房出租</a>	 	 				
+					</div>					
+				</div>
+			</div>
+			<div class="margin_t" >						
+					<center class="font-s" style="color: #C7C7C7;background: #eee;">(c) Copyright 2017 厂房帮  粤iCp备  17011034号 </center>
+			</div>	
+			<!--友情链接-->
+				<div class="swiper-scrollbar"></div>
+				</div>	
+			</div>	
+			</div><!--滚动区域end-->
+		</div><!--滚动区域end-->
+		<!--底部菜单-->
+		<div class="background bottom">   
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe603;</i>
+					<div>首页</div>
+				</div>
+			</a>
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe602;</i>
+					<div>需求信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe68d;</i>
+					<div>发布需求</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe63e;</i>
+					<div>出租信息</div>
+				</div>
+			</a>	
+			<a href="#">
+				<div>
+					<i class="iconfont">&#xe62a;</i>
+					<div>个人中心</div>
+				</div>
+			</a>				
+		</div>		
+	</body>
+<script src="js/Adaptation.js" type="text/javascript" charset="utf-8"></script>	
+<script type="text/javascript">
+$(function(){
+var windowHeight=$('body').height()
+$('.Modality1').height(windowHeight)/*模态框高度*/ 
+$('.Modality2').height(windowHeight)
+
+/*头部选项卡*/
+$('#tabList1 div').on('touchstart',function(){
+	$(this).addClass('border-bottom-ptc').siblings().removeClass('border-bottom-ptc') ;
+	//检查是否有数据
+	nothing($(this).index())
+})
+
+/*点击放大图片*/
+preventtouch('#tab2 img',function(obj){
+	console.log(obj.height())
+	$('.Modality1').fadeIn(200).find('img').attr('src',obj.attr('src')); 
+	
+	$('.Modality1 img').css({'margin-top':($('.Modality1').height()-obj.height())/2});
+	$('.Modality1').css({'display':'table-cell'})  	 
+})
+//隐藏模态
+$('.Modality1').on('touchstart',function(){
+	$(this).fadeOut(200)
+})
+
+/*收缩栏*/
+preventtouch('.table center',function(obj){
+			obj.parent().find('li:gt(0)').fadeToggle(300);
+			if(obj.html()=='查看更多+')
+			{
+				obj.html("收回-") 
+			}else{
+				obj.html("查看更多+")  
+			}					
+})
+
+//第二个模态框
+//
+$('.Contact-him').click(function(){
+	$('.Modality2').show()
+})
+//关闭第二个模态框
+$('.close-M').click(function(){
+	$('.Modality2').hide()
+})
+
+/*描述详情部分的选项卡*/ 
+tabs("#tabs");
+ 
+
+
+nothing(0)
+/*数据显示*/
+function nothing(index){
+	var len=$('#tabs > div').eq(index).find('.imgTextList').length;
+	if(len==0){
+		$('#tabs > div').eq(index).find('.nothing').show();
+		$('#tabs > div').eq(index).find('.more_a').hide()
+	}else{
+		$('#tabs > div').eq(index).find('.nothing').hide();
+		$('#tabs > div').eq(index).find('.more_a').show(); 		
+	}
+}
+
+//点击添加更多
+$('.more_a').click(function(){
+	var a=$('<a href="#" class="imgTextList"><div class="imgTextList_img"><img src="img/timg.jpg"></div><div class="text"><p>横沥镇妖步全新独院厂房1-3成交额美好的狂蜂浪蝶</p><div class="font-sx Specialline"><span>地区：东莞-横沥</span><span class="r red">价格：14元/m&sup2</span></div><div class="font-sx Specialline"><span>厂房面积：1200m&sup2;</span></div></div></a>')
+	$(this).parent().find('.a-list').append(a)
+})
+
+})
+
+</script>	
+</html>
+

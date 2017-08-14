@@ -58,8 +58,7 @@
 			<div class="swiper-wrapper">
 				<div class="swiper-slide">
 					<div class="ptc">
-						<div class="content headList">
-							
+						<div class="content headList">							
 							<a href="#">首页</a>
 							<a href="#">佣金悬赏</a>
 							<a href="#">附件信息</a>
@@ -68,8 +67,6 @@
 							<a href="#">行业资讯</a>
 							<a href="#">推荐厂房</a>
 							<a href="#">更多</a>		 						
-							
-
 						</div>
 					</div>
 					<!--头部列表结束-->
@@ -121,62 +118,51 @@
 								<div class="swiper-wrapper">
 									<div class="swiper-slide">					
 										<div class="RankingList">
-											<a href="#" class="imgTextList">
-												<div>
-													<span class="t">1</span>
-													<img src="img/1.jpg" class="margin_r" />													
-												</div>
-												<div>
-													<div class="l">
-													<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
-													<span>电话：18378433033</span>	
-													<span>厚街-西平</span>
+											<div class="ran-con">
+												<a href="#" class="imgTextList">
+													<div>
+														<span class="t">1</span>
+														<img src="img/1.jpg" class="margin_r" />													
 													</div>
-												</div>
-												<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p> 		
-											</a>
-											<a href="#" class="imgTextList">
-												<div>
-													<span class="t">1</span>
-													<img src="img/1.jpg" class="margin_r" />													
-												</div>
-												<div>
-													<div class="l">
-													<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
-													<span>电话：18378433033</span>	
-													<span>厚街-西平</span>
+													<div>
+														<div class="l">
+														<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
+														<span>电话：18378433033</span>	
+														<span>厚街-西平</span>
+														</div>
 													</div>
-												</div>
-												<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p>	
-											</a>
-											<a href="#" class="imgTextList">
-												<div>
-													<span class="t">1</span>
-													<img src="img/1.jpg" class="margin_r" />													
-												</div>
-												<div>
-													<div class="l">
-													<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
-													<span>电话：18378433033</span>	
-													<span>厚街-西平</span>
+													<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p> 		
+												</a>
+												<a href="#" class="imgTextList">
+													<div>
+														<span class="t">1</span>
+														<img src="img/1.jpg" class="margin_r" />													
 													</div>
-												</div>
-												<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p>	
-											</a>
-											<a href="#" class="imgTextList">
-												<div>
-													<span class="t">1</span>
-													<img src="img/1.jpg" class="margin_r" />													
-												</div>
-												<div>
-													<div class="l">
-													<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
-													<span>电话：18378433033</span>	
-													<span>厚街-西平</span>
+													<div>
+														<div class="l">
+														<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
+														<span>电话：18378433033</span>	
+														<span>厚街-西平</span>
+														</div>
 													</div>
-												</div>
-												<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p>	
-											</a>
+													<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p>	
+												</a>
+												<a href="#" class="imgTextList">
+													<div>
+														<span class="t">1</span>
+														<img src="img/1.jpg" class="margin_r" />													
+													</div>
+													<div>
+														<div class="l">
+														<p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p>
+														<span>电话：18378433033</span>	
+														<span>厚街-西平</span>
+														</div>
+													</div>
+													<p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p>	
+												</a>												
+											</div>
+
 											<a href="#" class="more_a margin_t">点击查看更多</a>
 										</div>					
 									</div><!--滚动1-->
@@ -408,9 +394,13 @@
 			Modality('.Modality')/*企业选址的下拉*/
 			/*水平选项卡*/
 			scrollH('#tabList1 div', '.swiper-container-horizontal');
-
-
 			
+			//点击添加
+			$('.more_a').click(function(){
+				var a=$('<a href="#" class="imgTextList"><div><span class="t">1</span> <img src="img/1.jpg" class="margin_r"></div><div><div class="l"><p>姓名：张晓明<i class="iconfont gold font-sx">&#xe60a;7</i></p><span>电话：18378433033</span> <span>厚街-西平</span></div></div><p><span class="font-sx red r">评价：2111<i class="iconfont font-sx red">&#xe605;</i></span></p></a>')
+				$(this).parent().find('.ran-con').append(a);
+				scrollH('#tabList1 div', '.swiper-container-horizontal');
+			})
 			
 		})
 	</script>

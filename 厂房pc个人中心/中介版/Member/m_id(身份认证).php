@@ -87,7 +87,6 @@
 					&nbsp;
 				</span>
 				<img class="m_id_img Headp_big" id="m_id_img_h" src=""/> 
-				
 			</div>
 		</div>
 		

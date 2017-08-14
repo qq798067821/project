@@ -6,8 +6,6 @@
 		<meta name="viewport"content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" /> 
 		<link rel="stylesheet" type="text/css" href="../css/css.css"/>
 		<link rel="stylesheet" type="text/css" href="../fonts/iconfont.css"/>
-		<link href="../up/css/common.css" type="text/css" rel="stylesheet"/>
-		<link rel="stylesheet" type="text/css" href="../up/css/index.css"/>
 		<script src="../js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
 
 		<style type="text/css">
@@ -18,12 +16,18 @@
 			.select select:nth-child(1){margin-top: 0;}
 			label{font-size: .7rem;line-height: 1.5rem;vertical-align: middle;}
 			label input[type=radio]{vertical-align: middle;}
-			textarea{width: 9.8rem;padding: .2rem;0: 4rem;} 
+			textarea{width: 9.8rem;padding: .2rem;height: 4rem;}
 			
 			
-			/*上传图片部分*/
-			.z_file .add-img{width: 5.5rem  !important;height: 6rem !important;} 
-			.upimg-div .up-section{width: 5.5rem  !important;height: 6rem !important;}
+			/*上传图片部分*/ 
+			.up-files{width: 11rem;}
+			.up-files i{float: left;}
+			.up-files i:nth-child(even){float: right;}
+			.up-files i:nth-child(n+3){margin-top: .5rem;}
+			.up-img{height: 5.5rem ; width: 5rem;text-align: center;display: block;background: url(../img/upimg.png);background-size: 100% 100%;position: relative;overflow: hidden;}
+			.up-img>*{position: absolute;}
+			.up-img img{height: 100%;width: 100%;top: 0;left: 0;z-index: 10;}
+			.up-img input[type=file]{padding: 100rem;left: -10rem;top:-10rem}
 		</style>
 	</head>
 	<body>
@@ -34,7 +38,7 @@
 						<img src="../img/LOGO(1).png" /> 
 					</div>
 					<div>
-						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a>
+						<a href="#" class="font ">东莞<span class="font-sx">[选择城市]</span></a> 
 					</div>
 					<div style="text-align: right;">
 						<a href=""><i class="iconfont i_big margin_r">&#xe619;</i></a> 
@@ -48,8 +52,8 @@
 			<div class="background ">
 				<div class="content">
 					<div class="title font-m  bule title-border">
-						仓库出租
-					</div> 
+						土地出租
+					</div>
 				</div>
 			</div>
 			<!--基本信息-->
@@ -85,16 +89,6 @@
 						<input type="text" id="" class="input-m margin_r" value="" />
 						<label for="">m&sup2;</label>
 					</div>
-					<div>
-						<span class="span">层数：</span>
-						<input type="text" id="" class="input-m margin_r" value="" />
-						<label for="">层</label>
-					</div>
-					<div>
-						<span class="span">层高：</span>
-						<input type="text" id="" class="input-m margin_r" value="" />
-						<label for="">米</label>
-					</div>					
 				</div>
 			</div>
 			<!--基本信息end-->
@@ -119,26 +113,16 @@
 								<textarea name="" rows="" cols="" placeholder="不少于10字····"></textarea>
 							</div>
 							<div>
-								<span class="span">上传图片：</span>
-								<div class="l upimgdiv">
-									<div class="z_photo upimg-div clear" >
-							               	 <section class="z_file fl">
-							               	 	<img src="../up/img/a11.png" class="add-img">
-							               	 	<input type="file" name="file" id="file" class="file" value="" accept="image/jpg,image/jpeg,image/png,image/bmp" multiple />
-							               	 </section>
-									        <aside class="mask works-mask">
-												<div class="mask-content">
-													<p class="del-p">您确定要删除图片吗？</p>
-													<p class="check-p"><span class="del-com wsdel-ok">确定</span><span class="wsdel-no">取消</span></p>
-												</div> 
-											</aside> 							               	 
-							         </div>	  
-							         <div class="clear"></div>
-								</div>								
-								<div>
-									<span class="span">标注位置：</span>
-									<a href="#" class="a-Geography ptc">点击添加</a> 
-								</div>
+								<span class="span">上传图片：<br>(双击删除)&nbsp;&nbsp;&nbsp;</span>
+									<div class="l up-files">
+									<i class="up-img">
+										<input type="file" onchange="upImg(this)" name="" id="" value="" />
+									</i>
+									</div>
+							</div>			
+							<div>
+								<span class="span">标注位置：</span>
+								<a href="#" class="a-Geography ptc">点击添加</a>
 							</div>
 						</div>
 					</div>
@@ -185,38 +169,7 @@
 
 		
 		<!--底部菜单-->
-		<div class="background bottom">
-			<a href="#">
-				<div>
-					<i class="iconfont">&#xe603;</i>
-					<div>首页</div>
-				</div>
-			</a>
-			<a href="#">
-				<div>
-					<i class="iconfont">&#xe602;</i> 
-					<div>需求信息</div>
-				</div>
-			</a>
-			<a href="#">
-				<div>
-					<i class="iconfont">&#xe68d;</i>
-					<div>发布需求</div>
-				</div>
-			</a>
-			<a href="#">
-				<div>
-					<i class="iconfont">&#xe63e;</i>
-					<div>出租信息</div>
-				</div>
-			</a>
-			<a href="#">
-				<div>
-					<i class="iconfont">&#xe62a;</i>  
-					<div>个人中心</div>
-				</div>
-			</a>
-		</div>
+		<center id='bottom' class="font-sx" style="line-height: 1.5rem;color: #C7C7C7;background: #000;">(c) Copyright 2017 厂房帮 粤iCp备 17011034号 </center>
 		
 	</body>
 	<script src="../up/js/imgUp.js"></script> 
@@ -224,11 +177,59 @@
 		$(function(){
 			var bodyH=$('body').height();//全部
 			var headH=$('#head').height();
-			var bH=$('.bottom').height();//底部高度
-			$('#con').height(bodyH-bH-headH)//内容高度
+			var bH=$('#bottom').height();//底部高度
+			$('#con').height(bodyH-bH-headH)//内容高度 
+					
 		})
+
+
+
+
+
+
+
+
+
+		//上传图片
+		function upImg(obj)
+		{
+			var up=$('<i class="up-img"><input type="file" onchange="upImg(this)" name="" id="" value="" /></i>');			
+			var f=$(obj).parents('i');
+			if(obj.files[0].type!='image/jpeg' && obj.files[0].type!='image/png' )
+			{
+				alert('只能上传jpeg和png类型图片')
+			}else{
+				
+				var url= URL.createObjectURL(obj.files[0]);
+				var img=$('<img />');
+				img.prop('src',url);
+				f.append(img);
+				if($('.up-files').find('i').length<8)
+				{
+					
+					$('.up-files').append(up);	
+				}
+				
+			}
+			//删除
+			if(f.has('img'))
+			{
+				f.click(function(){
+					f.remove()
+					if($('.up-files').find('i').length==0)
+					{
+						$('.up-files').append(up);
+					}
+				})
+			} 	
+		}
+		//点击提交时候
+		 var imgArr=[];//全局变量
+		$('.up-files input[type=file]').each(function(){
+			imgArr.push(this.files[0])
+		})
+		
 		
 	</script>	
 </html>
-
 

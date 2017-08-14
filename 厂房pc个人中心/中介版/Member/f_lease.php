@@ -3,7 +3,8 @@
 	.img i{position: relative;float: left;display: block;height: 180px;width: 160px;border: 1px solid #000;margin-right:10px ;overflow: hidden;text-align: center;line-height: 180px;font-size: 80px !important;}
 	.img i:nth-child(n+4){margin-top: 5px;}
 	.img i > input{display: block;position: absolute;padding: 1000px;left: -10px;top: -10px;cursor: pointer;}
-	.img i > img{position: absolute;height: 100%;width: 100%;left: 0;top: 0;}	 
+	.img i > img{position: absolute;height: 100%;width: 100%;left: 0;top: 0;}	
+	.custom-div{display: none;}
 </style>
 
 <div class="y_m_r">
@@ -347,6 +348,17 @@
 				<span class="select-a">有宿舍<img src="../../../img/3jiao.png" alt="" /></span>
 				<span class="select-a custom">自定义<img src="../../../img/3jiao.png" /></span>				
 			</div>
+			<div class="custom-div">
+				<div class="tr"> 
+					<span class="tsp">&nbsp;</span>
+					<span class="font_lh">* 字符不能超过5个字，如果为“自定义”等于没添加标签</span>
+				</div>
+				<div class="tr custom-a-list">
+					<span class="tsp">&nbsp;</span> 
+					<div class="custom-a" onclick="foutin(this)" >自定义</div>				
+				</div> 					
+			</div>
+				
 		</div> 
 	
 								
@@ -356,7 +368,6 @@
 </div>
 
 <script type="text/javascript">
-	$(function(){
 		$('#tj').click(function(){
 			var keys=true;
 			//地址没选
@@ -448,10 +459,14 @@
 			}
 		})
 		
+		
+		
+		
+		
 		/*多选*/
 		var msl_mun=0;
 		var msl_text=[];
-		$('.custom').addClass('bor').css({'color':'#00AE66'}).find('img').show();
+		//$('.custom').addClass('bor').css({'color':'#00AE66'}).find('img').show();
 		$('#more-select-label span').click(function(){
 			if($(this).hasClass('bor')){
 				$(this).removeClass('bor').css({'color':'#191919'});
@@ -466,25 +481,68 @@
 					msl_mun++;						
 				}
 			}
-			if($(this).hasClass('custom'))
-			{
-				msl_mun=0;
-				msl_text=[];
-				$(this).find('img').show();
-				$(this).addClass('bor').css({'color':'#00AE66'}).siblings().removeClass('bor').css({'color':'#191919'}).find('img').hide();	
-			}else{ 
-				$(this).parent().find('.custom').removeClass('bor').css({'color':'#191919'}).find('img').hide();
+			if($(this).hasClass('custom') && $(this).hasClass('bor'))
+			{	
+				$('.custom-div').show()
 			}
-			
-		})
+			if($(this).hasClass('custom') && !$(this).hasClass('bor'))
+			{
+				$('.custom-div').hide();
+				var len=$('.custom-a-list > div').length;
+				msl_mun=msl_mun-len+1;
+				$('.custom-a-list > div').remove();
+				var div=$('<div class="custom-a" onclick="foutin(this)" >自定义</div>'); 
+				$('.custom-a-list').append(div)					
+			}
+
 		
 		
-		//加在传送ajax里面
-		if(msl_text=='')
-		{
-			msl_text.push('自定义');
-		}
-		console.log(msl_text)
+		
+			//加在传送ajax里面
+			if(msl_text=='')
+			{
+				msl_text.push('自定义');
+			}
+			console.log(msl_text)
 		
 	})	
+	
+	
+	//自定义标签         //添加的
+	function foutin(obj){
+		$(obj).replaceWith('<input type="text" id="custom" value="" class="custom-a"  onblur="foutout(this)" onkeydown="kd(this)"/>');
+		$('#custom').focus()
+	}
+	
+
+	function kd(obj){
+		if($(obj).val().length>5)
+		{
+			alert('字符数不能大于5')
+		}
+	}
+		
+	function foutout(obj){
+		var html=$(obj).val();
+		html=$.trim(html);
+	    if(html!="" && html.length<=5 && html.length!=0)
+	    {
+	    	if($('.custom-a-list').find('.custom-a').length<=3-msl_mun)
+	    	{
+	    		msl_mun++;
+				var div=$('<div class="custom-a" onclick="foutin(this)" >自定义</div>'); 
+				$('.custom-a-list').append(div)		    		
+	    	}		
+	    }else{
+	    	html='自定义'
+	    }
+		$(obj).replaceWith('<div class="custom-a" onclick="foutin(this)" >'+html+'</div>');	
+	}
+	
+	//点击提交时候获取
+	var costomArry=[];
+	$('.custom-a-list .custom-a').each(function(){
+	  	costomArry.push($(this).text());
+	})		
+	
 </script>

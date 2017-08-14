@@ -18,16 +18,22 @@ function preventtouch(obj,fn){
 
 
 
-/*区域竖滚动*/
+
 $(window).resize(function(){
-	//scrollV()
+	res();
 })
+
+function res(){
+	var headHeight=$('#head').height();
+	var windowHeight=$(window).height();
+	var Bottommenu=$('.bottom').height();
+	$('.swiper-container-vertical').height(windowHeight-headHeight-Bottommenu)	
+}
+
+/*区域竖滚动*/
 scrollV();/*内容滚动*/
 function scrollV(){
-	var headHeight=$('#head').height();
-	var windowHeight=$('body').height();
-	var Bottommenu=$('.bottom').height();
-	$('.swiper-container-vertical').height(windowHeight-headHeight-Bottommenu)
+	res()
 	var mySwiper = new Swiper('.swiper-container-vertical', {
 	    scrollbar: '.swiper-scrollbar', 
 	    direction: 'vertical',
